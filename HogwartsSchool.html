@@ -3,6 +3,14 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Welcome to Hogwarts</title>
+        <script language="javascript">
+            function password()
+            {
+            pass=prompt('암호를 입력해주세요\n(답) 나는 천하의 멍텅구리임을 엄숙하게 선언합니다',''); // (답) 부분은 테스트, 발표 이후에는 지울 것임 
+            if (pass=="나는 천하의 멍텅구리임을 엄숙하게 선언합니다") {location.href="http://bonozoa.dothome.co.kr/SchoolInt/Map.html";}
+            else {alert();}
+            }
+        </script>
         <style>
             a { text-decoration: none; }
         </style>
@@ -13,7 +21,7 @@
             <b>학교소개</b>
             <ol>
                 <li> <a href=http://bonozoa.dothome.co.kr/SchoolInt/Song.html>교가</a></li>
-                <li> <a href="http://bonozoa.dothome.co.kr/SchoolInt/Map.html">학교지도</a></li>
+                <li> <a href="javascript:password();">학교지도</a></li>
             </ol>
         </li>
         <li>

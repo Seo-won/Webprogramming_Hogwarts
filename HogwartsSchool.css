@@ -1,11 +1,11 @@
 @charset "utf-8";
-header h1 {position: absolute; left:0; top:0; z-index:100; } /* width: 170px; background: #EDDEBF;} */
+header h1 {position: absolute; left:0; top:0; padding: 10px 0 0 10px ; z-index:100; } /* width: 170px; background: #EDDEBF;} */
 header #inb {position: absolute; left: 0; top: 0; padding: 0  55px 0 255px ;  width: 100%; box-sizing: border-box;}
 header #inb nav {position: relative;  border-bottom: 1px solid rgb(255,255,255); font-size:0; text-align:center;}
 header #inb nav >ul  {display: inline-block; }
 header #inb nav >ul :hover ul {opacity:1;}
 header #inb nav >ul > li {display: inline-block; position: relative;}
-header  #inb nav > ul > li > a{ display: block; position: relative; width: 180px; height: 80px; font-size:20px; color:#fff; line-height: 80px;}
+header  #inb nav > ul > li > a{ display: block; position: relative; width: 180px; height: 90px; font-size:20px; color:#fff; line-height: 90px;}
 header  #inb nav > ul > li > a:after { content: ""; position: absolute; left: 0; bottom:-1px; width:0; height:2.5px; background: #fff; transition: all 0.5s;} 
 header  #inb nav > ul > li > a:hover:after { left: 0 ; width:100%; } 
 header #inb nav> ul ul { position: absolute; width: 100% ; text-align: center; opacity:0; transition: all 0.5s;}

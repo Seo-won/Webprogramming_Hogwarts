@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>수업소개</title>
+<head>
+    <style>
+        body {
+                background-color: rgb(75, 73, 71);
+                margin: 0 auto;
+                width: 960px
+            }
+        .head {
+            text-align: center;
+            padding: 70px;
+            margin: 10px;
+            background-color: rgba(134, 99, 59, 0.596); 
+            z-index: 1;         
+        }
+        .head::after { 
+            padding: 100px 70px 70px 70px;
+            margin: 10px;
+            content: "";
+            background-image: url('Logo.png');
+            background-size: 140px 140px;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        #container1 {           
+            padding: 20px 10px 10px 10px;
+            margin: 10px;
+            height: 300px;
+            background-color: #cca67b;
+        }
+        #container2 {           
+            padding: 20px 10px 10px 10px;
+            margin: 10px;
+            height: 300px;
+            background-color: rgb(156, 165, 130);
+        }
+        #container3 {           
+            padding: 20px 10px 10px 10px;
+            margin: 10px;
+            height: 200px;
+            background-color: rgb(143, 151, 151);            
+        }
+
+        .subjectTitle {
+            text-align: center;
+            margin: 0 30px;
+            padding: 30px 30px;
+            background-color: rgb(241, 241, 241, 0.3);
+            font-size: 20px;
+            box-shadow: 5px 5px 7px #00000054;
+        }
+
+        div.content { overflow: hidden; }
+        div.subject {
+            float: left;
+            width: 140px;
+            margin: 30px 30px;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: #dfd7b59a;
+            box-shadow: 5px 5px 7px #0505054d;
+            text-align: center;
+        }
+        div.subject:hover {
+            background-color: #dfd7b5f8;
+        }
+        a { text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="head"><h1>수업 소개</h1></div>
+    <div class="container" id="container1">
+        <div class=subjectTitle id="commonSubject">공통과목</div>
+        <div class="content" id="commonSubjectList">
+            <div class="subject" id="charms"><a href=http://dltk456.dothome.co.kr//Hogwarts/charms.html>일반 마법</a></div>
+            <div class="subject" id="transfiguration"><a href="#">변환 마법</a></div>
+            <div class="subject" id="potions"><a href="#">마법약</a></div>
+            <div class="subject" id="herbology"><a href="#">약초학</a></div>
+            <div class="subject" id="astronomy"><a href="#">천문학</a></div>
+            <div class="subject" id="historyOfMagic"><a href="#">마법의 역사</a></div>
+            <div class="subject" id="DefenceAgainstTheDarkArts"><a href="#">어둠의 마법 방어법</a></div>
+        </div>
+    </div>    
+    <div class="container" id="container2">
+        <div class=subjectTitle id="electiveSubject">선택과목</div>
+        <div class="content" id="electiveSubjectList">
+            <div class="subject" id="CareOfMagicalCreatures"><a href="#">신비한 동물 돌보기</a></div>
+            <div class="subject" id="Divination"><a href="#">점술</a></div>
+            <div class="subject" id="MuggleStudies"><a href="#">머글학</a></div>
+            <div class="subject" id="StudyOfAncientRunes"><a href="#">고대 룬문자 연구</a></div>
+            <div class="subject" id="Arithmancy"><a href="#">산술점</a></div>
+        </div>
+    </div>    
+    <div class="container" id="container3">
+        <div class=subjectTitle id="otherSubject">기타과목</div>
+        <div class="content" id="otherSubjectList">
+            <div class="subject" id="Flights"><a href="#">비행</a></div>
+            <div class="subject" id="Apparition"><a href="#">순간이동</a></div>
+            <div class="subject" id="Alchemy"><a href="#">연금술</a></div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -3,41 +3,48 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Welcome to Hogwarts</title>
-        <script language="javascript">
-            function password()
-            {
-            pass=prompt('암호를 입력해주세요\n(답) 나는 천하의 멍텅구리임을 엄숙하게 선언합니다',''); // (답) 부분은 테스트, 발표 이후에는 지울 것임 
-            if (pass=="나는 천하의 멍텅구리임을 엄숙하게 선언합니다") {location.href="http://bonozoa.dothome.co.kr/SchoolInt/Map.html";}
-            else {alert();}
-            }
-        </script>
-        <style>
-            a { text-decoration: none; }
-        </style>
+        <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/default.css">
+        <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
+        <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
     </head>
-    <body>
-        <ul>
-        <li>
-            <b>학교소개</b>
-            <ol>
-                <li> <a href=http://bonozoa.dothome.co.kr/SchoolInt/Song.html>교가</a></li>
-                <li> <a href="javascript:password();">학교지도</a></li>
-            </ol>
-        </li>
-        <li>
-            <b>학부소개</b>
-            <ol>
-                <li><a href=http://dltk456.dothome.co.kr/Class.html>수업소개</a></li>
-                <li><a href=http://jju0love.dothome.co.kr/HogwartProfessors.html>교수진소개</li>
-                <li><a href=http://jju0love.dothome.co.kr/Hogwart.html>기숙사소개</li>
-            </ol>
-        </li>
-        <li>
-            <b><a href=http://shinheejin.dothome.co.kr/HarryPotter2.html> 학부미리보기(마법주문설명/신비한동물사전)</a></b>
-        </li>
-        <li>
-            <b><a href=http://dltk456.dothome.co.kr/Notice.html>공지사항</a></b>
-        </li>
-        </ul>
+    <body><!--헤더안에 각자 수정할 부분 한군데 있음-->
+        <header>
+            <h1><a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img src="http://bonozoa.dothome.co.kr/top_logo.png" alt="호그와트"></a></h1>
+            <h2 class="hide">대메뉴</h2>
+            <div id="inb">
+                <nav>
+                    <ul>
+                    <li><a href="#a">학교소개</a>
+                        <ul>
+                        <li><a href="http://bonozoa.dothome.co.kr/SchoolInt/Song.html">교가</a></li>
+                        <li><a href="javascript:password();">학교지도</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#a">학부소개</a>
+                        <ul>
+                        <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Class.html">수업소개</a></li>
+                        <li><a href="http://jju0love.dothome.co.kr/HogwartProfessors.html">교수진소개</a></li>
+                        <li><a href="http://jju0love.dothome.co.kr/Hogwart.html">기숙사소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#a">학부미리보기</a>
+                        <ul>
+                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">학부미리보기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#a">공지사항</a>
+                        <ul>
+                        <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Notice.html">공지사항</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="visual"><img src="http://bonozoa.dothome.co.kr/show1.png" alt=""></div><!--show뒤에 숫자 각자 파트에 맞춰서 바꿔줘-->
+                <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>학부미리보기:8-->
+        </header>
+        <main>
+            <!--여기에 각자 맡은파트 작성-->
+        </main>
     </body>
 </html>

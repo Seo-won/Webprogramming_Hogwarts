@@ -4,80 +4,74 @@
     <meta charset="utf-8">
     <title>Domitory</title>
     <style>
-        html, body {
-            background-color: gray;
-            margin: 0;
-            height: 100%;
-            overflow: scroll;
-        }
-        #background {
-            background-image: url(Hogwarts_Dormitory.jpg);
-            background-repeat:no-repeat;
-            background-size: 100%;
-            background-attachment: scroll;
-            z-index: 0;
-        }
-        #background > #opacity {
-            background-color: rgba(255, 255, 255, 0.4);
-            height: 100%;
-            z-index: 10;
-            overflow: scroll;
+        body {
+            margin: 0 auto;
+            width: 960px;
+            background-color: burlywood;
         }
 
-        #opacity * {
-            z-index: 100;
-        }
-
-        #gate {
-            font-size: 2em;
-            font-style: Arial;
-            font-weight: bold;
+        #top {
+            border: solid black;
             text-align: center;
+            margin: 30px;
         }
 
-        #center {
-            max-width: 100%; height: 430px;
-            border: 5px solid skyblue;
-            border-radius: 10px;
-            padding: 10px;
+        #middle {
+            overflow: hidden;
+            margin: 80px 0;
+            padding: 20px 0;
+            border: 3px solid brown;
         }
 
-        .domitoryimg {
-            float: left;
-            max-width: 100%;
+        #bottom {
+            overflow: hidden;
+         }
+
+        .dormi_main {
+            width: 400px; float: left;
+            margin-right: 10px; margin-bottom: 5px;
         }
-        .img{
-            width: 25%;
-            float: left;
+
+        .dormi_mark {
+            width: 300px; float: left;
+            margin: 5px;
+            border: 3px solid brown;
         }
+
+        .dormi_show {
+            width: 450px; float: left;
+            margin: 5px;
+            border: 3px solid brown;
+        }
+
         div > img {
             max-width: 100%; height: auto;
         }  
 
-        .introduce{
-            font-size:1.33em;
+        .introduce {
             font-weight: 450;
         }
 
     </style>
 </head>
 <body>
-    <div id="background">
-        <div id="opacity">
-            <p id="gate">Domitory</p>
-            <div class="domitoryimg">
-                <img src="호그와트.png">
-            </div>
-            <p class="introduce">학교가 설립된 초창기와 함께 개관한 기숙사는 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다. 기숙사 배정식 날 모든 학생 여러분은 마법의 분류모자에 의해 학생 한 명 한 명의 특성에 가장 적합한 기숙사를 배정받을 수 있습니다. 연면적 8,805평 규모의 생활관은 다양한 형태의 호실을 통해 학생들의 요구에 부합하는 서비스를 제공합니다. 또한 호별 냉장고 제공, 세면실, 화장실 호실 내 설치로 사생들의 독립성을 최대한 보장하며, 기숙사내 다목적실, 자율학습실, 마법시행실, 세탁실 등을 설치하여 최고의 주거편의성을 누릴 수 있도록 하였습니다. 특히 최첨단의 출입통제시스템을 통해 입사생들의 안전하고 쾌적한 생활이 보장될 수 있도록 하였습니다</p>
-            <br>
-            <hr>
-            <div class="img">
-                <img src="Gryffindor.png">
-                <img src="Slytherin.png">
-                <img src="Ravenclaw.png">
-                <img src="Hufflepuff.png">
-            </div>
-        </div>
+    <div id="top">
+        <p>Domitory</p>
+    </div>
+    <div id="middle">
+        <div class="dormi_main"><img src="기숙사내부1.jpg"></div>
+        <p class="introduce">호그와트 대학교 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다.<br><br>학교가 설립된 초창기와 함께 개관한 기숙사는 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다. 기숙사 배정식 날 모든 학생 여러분은 마법의 분류모자에 의해 학생 한 명 한 명의 특성에 가장 적합한 기숙사를 배정받을 수 있습니다. 연면적 8,805평 규모의 생활관은 다양한 형태의 호실을 통해 학생들의 요구에 부합하는 서비스를 제공합니다. 또한 호별 냉장고 제공, 세면실, 화장실 호실 내 설치로 사생들의 독립성을 최대한 보장하며, 기숙사내 다목적실, 자율학습실, 마법시행실, 세탁실 등을 설치하여 최고의 주거편의성을 누릴 수 있도록 하였습니다. 특히 최첨단의 출입통제시스템을 통해 입사생들의 안전하고 쾌적한 생활이 보장될 수 있도록 하였습니다</p>
+    </div>
+    <ul><li>기숙사 소개</li></ul>
+    <div id="bottom">
+        <div class="dormi_mark"><img  src="Gryffindor.png"></div>
+        <div class="dormi_show"><img  src="그리핀도르내부.jpg"></div>
+        <div class="dormi_mark"><img  src="Slytherin.png"></div>
+        <div class="dormi_show"><img  src="슬리데린내부.jpg"></div>
+        <div class="dormi_mark"><img  src="Ravenclaw.png"></div>
+        <div class="dormi_show"><img  src="레번클로내부.jpg"></div>
+        <div class="dormi_mark"><img  src="Hufflepuff.png"></div>
+        <div class="dormi_show"><img  src="허플퍼프내부.jpg"></div>
     </div>
 </body>
 </html>

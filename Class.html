@@ -12,68 +12,23 @@
                     margin: 0 auto;                 
                 }
             main h1{text-align: center; color:#fff; background-color: #811924; font-size: 30px;}
-            /*.head {
-                text-align: center;
-                padding: 70px;
-                margin: 10px;
-                background-color: rgba(134, 99, 59, 0.596); 
-                z-index: 1;         
-            }
-            .head::after { 
-                padding: 100px 70px 70px 70px;
-                margin: 10px;
-                content: "";
-                background-image: url('Logo.png');
-                background-size: 140px 140px;
-                background-repeat: no-repeat;
-                position: relative;
-                z-index: -1;
-                opacity: 0.5;
-            }*/
-            
-            #container1 {           
-                padding: 20px 10px 10px 10px;
-                margin: 10px;
-                height: 300px;
-                background-color: #cca67b;
-            }
-            #container2 {           
-                padding: 20px 10px 10px 10px;
-                margin: 10px;
-                height: 300px;
-                background-color: rgb(156, 165, 130);
-            }
-            #container3 {           
-                padding: 20px 10px 10px 10px;
-                margin: 10px;
-                height: 200px;
-                background-color: rgb(143, 151, 151);            
-            }
-
             .subjectTitle {
+                color: black;
                 text-align: center;
-                margin: 0 30px;
+                margin: 20px 30px;
                 padding: 30px 30px;
                 background-color: rgb(241, 241, 241, 0.3);
                 font-size: 20px;
                 box-shadow: 5px 5px 7px #00000054;
             }
-
-            div.content { overflow: hidden; }
-            div.subject {
-                float: left;
-                width: 140px;
-                margin: 30px 30px;
-                padding: 10px;
-                border-radius: 30px;
-                background-color: #dfd7b59a;
-                box-shadow: 5px 5px 7px #0505054d;
+            table { 
+                background-color: blanchedalmond;
                 text-align: center;
-            }
-            div.subject:hover {
-                background-color: #dfd7b5f8;
-            }
-            a { text-decoration: none;}
+                margin: auto;
+                font-size: 20px;
+                width: 1200px;
+                border-color: brown;
+                }
         </style>
     </head>
     <body><!--헤더안에 각자 수정할 부분 한군데 있음-->
@@ -96,9 +51,9 @@
                         <li><a href="http://jju0love.dothome.co.kr/Hogwart.html">기숙사소개</a></li>
                         </ul>
                     </li>
-                    <li><a href="#a">학부미리보기</a>
+                    <li><a href="#a">대도서관</a>
                         <ul>
-                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">학부미리보기</a></li>
+                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">대도서관</a></li>
                         </ul>
                     </li>
                     <li><a href="#a">공지사항</a>
@@ -116,33 +71,124 @@
             <h1>수업 소개</h1>
             <div class="head"></div>
             <div class="container" id="container1">
-                <div class=subjectTitle id="commonSubject">공통과목</div>
+                <div class=subjectTitle id="commonSubject">1~5학년 공통과정</div>
                 <div class="content" id="commonSubjectList">
-                    <div class="subject" id="charms"><a href=http://dltk456.dothome.co.kr//Hogwarts/charms.html>일반 마법</a></div>
-                    <div class="subject" id="transfiguration"><a href="#">변환 마법</a></div>
-                    <div class="subject" id="potions"><a href="#">마법약</a></div>
-                    <div class="subject" id="herbology"><a href="#">약초학</a></div>
-                    <div class="subject" id="astronomy"><a href="#">천문학</a></div>
-                    <div class="subject" id="historyOfMagic"><a href="#">마법의 역사</a></div>
-                    <div class="subject" id="DefenceAgainstTheDarkArts"><a href="#">어둠의 마법 방어법</a></div>
+                    <table border="5">
+                        <thead>
+                            <tr>
+                                <th>교과목 이름</th>
+                                <th>담당 교수</th>
+                                <th>교과목 개요 및 설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>비행술(Flights)</td>
+                                <td>후치 부인(Madame Hooch)</td>
+                                <td>야외 수업으로 이루어져 있다. 1권 이후로 등장하지 않기 때문에 1학년 때만 배우는 과목으로 생각된다.</td>
+                            </tr>
+                            <tr>
+                                <td>마법(Charms)</td>
+                                <td>필리우스 플리트윅(Filius Flitwick)</td>
+                                <td>래번클로 사감이자 고블린 혼혈인 플리트윅 교수의 수업이다. 마법에 대한 이론을 배우며 주문 사용을 연습하는 시간으로 이루어져 있다. 유명한 장면인 '윙가르디움 레비오사'가 바로 이 수업 시간이다.</td>
+                            </tr>
+                            <tr>
+                                <td>마법약(Potions)</td>
+                                <td>호레이스 슬러그혼(Horace Slughorn), 세베루스 스네이프(Severus Snape)</td>
+                                <td>마법약 조제에 필요한 지식을 배우고 실습을 한다. 마법약 교수인 슬러그혼과 스네이프 둘 다 슬리데린의 사감이다.</td>
+                            </tr>
+                            <tr>
+                                <td>마법의 역사(History of Magic)</td>
+                                <td>커스버트 빈스(Cuthbert Binns)</td>
+                                <td>호그와트에서 가장 지루한 수업으로 이름난 과목이다. 담당 교수인 빈스 교수는 유령이기 때문에 수업 중 그나마 재밌는 부분이 교수가 문이 아닌 칠판으로 들어온다는 것이라고 책에 언급되어 있다.</td>
+                            </tr>
+                            <tr>
+                                <td>변신술(Transfigurations)</td>
+                                <td>미네르바 맥고나걸(Minerva Mcgonagall)</td>
+                                <td> 그리핀도르 사감인 맥고나걸 교수의 담당 수업이다. 영문이름인 Transfigurations는 모양을 바꾼다는 의미로, 실제 책에서 나오는 수업 내용도 변신과 변형 모두를 다루고 있다.</td>
+                            </tr>
+                            <tr>
+                                <td>약초학(Herbology)</td>
+                                <td>포모나 스프라우트(Pomona Sprout)</td>
+                                <td>후플푸프 사감인 스프라우트 교수가 담당하는 과목으로 여러 마법 식물에 대한 지식과 이를 다루는 법에 대해 배운다. 야외수업이지만 온실에서 진행된다.</td>
+                            </tr>
+                            <tr>
+                                <td>어둠의 마법 방어술 (Defence against the Dark Arts)</td>
+                                <td>
+                                    1권: 퀴리너스 퀴렐(Quirinus Quirrell)
+                                    
+                                    2권: 질데로이 록허트(Gilderoy Lockhart) 
+                                    
+                                    3권: 리무스 루핀(Remus Lupin)
+                                    
+                                    4권: 앨러스터 무디(Alastor Moody)
+                                    
+                                    5권: 돌로레스 엄브릿지(Dolores Umbridge)
+                                    
+                                    6권: 세베루스 스네이프(Severus Snape)
+                                    
+                                    7권: 아마커스 캐로우(Amycus Carrow)</td>
+                                <td>담당 교수가 매년 사건이나 사고가 터져서 바뀌게 되는 징크스가 있다. 볼드모트가 이 수업의 담당 교수가 되길 바랐는데 덤블도어가 임용을 거절한 뒤로부터 이런 징크스가 생겼다고 한다. 팬들은 주로 어마방, DADA 등으로 줄여 부른다. 어둠의 마법을 방어하는 방법에 대해 배운다. 또한 보가트, 늑대인간, 디멘터 등과 같이 저주 받거나 위험한 생물에 대한 대처법도 배울 수 있다.</td>
+                            </tr>
+                            <tr>
+                                <td>천문학(Astronomy)</td>
+                                <td>오로라 시니스트라(Aurora Sinistra)</td>
+                                <td>점성술뿐만 아니라 머글들이 생각하는 일반적인 천문학도 배운다. 내행성, 외행성이 어떻게 움직이는지, 오늘 별의 적경이 얼마인지 등등을 알아야 위치에 따른 점을 볼테니..</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>    
             <div class="container" id="container2">
-                <div class=subjectTitle id="electiveSubject">선택과목</div>
+                <div class=subjectTitle id="electiveSubject">3학년 이후 선택과목</div>
                 <div class="content" id="electiveSubjectList">
-                    <div class="subject" id="CareOfMagicalCreatures"><a href="#">신비한 동물 돌보기</a></div>
-                    <div class="subject" id="Divination"><a href="#">점술</a></div>
-                    <div class="subject" id="MuggleStudies"><a href="#">머글학</a></div>
-                    <div class="subject" id="StudyOfAncientRunes"><a href="#">고대 룬문자 연구</a></div>
-                    <div class="subject" id="Arithmancy"><a href="#">산술점</a></div>
+                    <table border="5">
+                        <thaed>
+                            <tr>
+                                <th>교과목 이름</th>
+                                <th>담당 교수</th>
+                                <th>교과목 개요 및 설명</th>
+                            </tr>
+                        </thaed>
+                        <tbody>
+                            <tr>
+                                <td>고대 룬 문자(Study of Ancient Runes)</td>
+                                <td>배쉬다 배블링(Bathsheda Babbling)</td>
+                                <td>고대 룬 문자와 그에 깃든 마법에 대해 배운다. 호그와트에 개설된 수업 중 가장 이론적인 수업이다.</td>
+                            </tr>
+                            <tr>
+                                <td> 머글 연구(Muggle Studies)</td>
+                                <td>퀴리너스 퀴렐(Quirinus Quirrell), 채러티 벌베이지(Charity Burbage), 알렉토 캐로우(Alecto Carros)</td>
+                                <td>해리 포터가 입학하기 전까지는 퀴렐이 담당 교수였으며 볼드모트가 호그와트를 점령했던 7권에서는 알렉토 캐로우가 담당 교수였던 과목이다. 마법 사회의 입장에서 머글의 사회와 기술 등에 대해 배운다.</td>
+                            </tr>
+                            <tr>
+                                <td>산술점(Arithmancy)</td>
+                                <td>셉티마 벡터(Septima Vector)</td>
+                                <td>수학적 공식과 그래프를 통해 미래를 예측하는 방법을 배운다. 또한 숫자의 마법적 성질을 배운다는 언급으로 보아 수비학처럼 숫자의 상징과 마법진 등을 배우는 것으로 추측된다.</td>
+                            </tr>
+                            <tr>
+                                <td>신비한 동물 돌보기(Care of Magical Creatures)</td>
+                                <td>실바너스 캐틀번(Silvanus Kettleburn), 루베우스 해그리드(Rubeus Hagrid), 빌헬미나 그루블리플랭크(Wilhelmina Grubbly-Plank)</td>
+                                <td>여러가지 신비한 마법 생물들에 대해 배우고 이들을 다루고 돌보는 방법을 실습하는 과목이다. 2권까지는 캐틀번 교수가, 3권부터는 해그리드가 담당했으며 해그리드에게 일이 생겼을 때에는 그루블리플랭크 교수가 대타로 수업을 진행했다. 이 교과목의 교과서인 신비한 동물 사전의 저자가 바로 뉴트 스캐맨더이다.</td>
+                            </tr>
+                            <tr>
+                                <td>점술(Divination)</td>
+                                <td>사이빌 트릴로니(Sybill Trelawney), 피렌체(Firenze)</td>
+                                <td>트릴로니 교수가 담당하지만 5권부터는 켄타로우스인 피렌체와 함께 수업을 맡고 있다. 미래의 일을 예측하는 여러가지 점술에 대해 배운다.</td>
+                            </tr>
+                            <tr>
+                                <td>연금술(Alchemy)</td>
+                                <td>-</td>
+                                <td>6학년 이상부터 들을 수 있다. 매년 개설되는 과목은 아니며 일정 수 이상의 학생이 신청해야만 개설된다고 한다. 머글들의 고대 화학인 연금술과 매우 유사한 과목이라고 한다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>    
             <div class="container" id="container3">
-                <div class=subjectTitle id="otherSubject">기타과목</div>
+                <div class=subjectTitle id="otherSubject">시험</div>
                 <div class="content" id="otherSubjectList">
-                    <div class="subject" id="Flights"><a href="#">비행</a></div>
-                    <div class="subject" id="Apparition"><a href="#">순간이동</a></div>
-                    <div class="subject" id="Alchemy"><a href="#">연금술</a></div>
+                    
                 </div>
             </div> 
         </main>

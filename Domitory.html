@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Domitory</title>
-    <style>
-        body {
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Welcome to Hogwarts</title>
+        <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/default.css">
+        <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
+        <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
+        <style>
+        main {
             margin: 0 auto;
             width: 960px;
-            background-color: burlywood;
+            background-color: burlywood
         }
 
         #top {
@@ -51,27 +54,63 @@
         .introduce {
             font-weight: 450;
         }
-
-    </style>
-</head>
-<body>
-    <div id="top">
-        <p>Domitory</p>
-    </div>
-    <div id="middle">
-        <div class="dormi_main"><img src="기숙사내부1.jpg"></div>
-        <p class="introduce">호그와트 대학교 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다.<br><br>학교가 설립된 초창기와 함께 개관한 기숙사는 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다. 기숙사 배정식 날 모든 학생 여러분은 마법의 분류모자에 의해 학생 한 명 한 명의 특성에 가장 적합한 기숙사를 배정받을 수 있습니다. 연면적 8,805평 규모의 생활관은 다양한 형태의 호실을 통해 학생들의 요구에 부합하는 서비스를 제공합니다. 또한 호별 냉장고 제공, 세면실, 화장실 호실 내 설치로 사생들의 독립성을 최대한 보장하며, 기숙사내 다목적실, 자율학습실, 마법시행실, 세탁실 등을 설치하여 최고의 주거편의성을 누릴 수 있도록 하였습니다. 특히 최첨단의 출입통제시스템을 통해 입사생들의 안전하고 쾌적한 생활이 보장될 수 있도록 하였습니다</p>
-    </div>
-    <ul><li>기숙사 소개</li></ul>
-    <div id="bottom">
-        <div class="dormi_mark"><img  src="Gryffindor.png"></div>
-        <div class="dormi_show"><img  src="그리핀도르내부.jpg"></div>
-        <div class="dormi_mark"><img  src="Slytherin.png"></div>
-        <div class="dormi_show"><img  src="슬리데린내부.jpg"></div>
-        <div class="dormi_mark"><img  src="Ravenclaw.png"></div>
-        <div class="dormi_show"><img  src="레번클로내부.jpg"></div>
-        <div class="dormi_mark"><img  src="Hufflepuff.png"></div>
-        <div class="dormi_show"><img  src="허플퍼프내부.jpg"></div>
-    </div>
-</body>
+        </style>
+    </head>
+    <body><!--헤더안에 각자 수정할 부분 한군데 있음-->
+        <header>
+            <h1><a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img src="http://bonozoa.dothome.co.kr/top_logo.png" alt="호그와트"></a></h1>
+            <h2 class="hide">대메뉴</h2>
+            <div id="inb">
+                <nav>
+                    <ul>
+                    <li><a href="#a">학교소개</a>
+                        <ul>
+                        <li><a href="http://bonozoa.dothome.co.kr/SchoolInt/Song.html">교가</a></li>
+                        <li><a href="javascript:password();">학교지도</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#a">학부소개</a>
+                        <ul>
+                        <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Class.html">수업소개</a></li>
+                        <li><a href="http://jju0love.dothome.co.kr/HogwartProfessors.html">교수진소개</a></li>
+                        <li><a href="http://jju0love.dothome.co.kr/Hogwart.html">기숙사소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#a">학부미리보기</a>
+                        <ul>
+                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">학부미리보기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#a">공지사항</a>
+                        <ul>
+                        <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Notice.html">공지사항</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="visual"><img src="http://bonozoa.dothome.co.kr/show1.png" alt=""></div><!--show뒤에 숫자 각자 파트에 맞춰서 바꿔줘-->
+                <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>학부미리보기:8-->
+        </header>
+        <main>
+            <div id="top">
+                <p>Domitory</p>
+            </div>
+            <div id="middle">
+                <div class="dormi_main"><img src="기숙사내부1.jpg"></div>
+                <p class="introduce">호그와트 대학교 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다.<br><br>학교가 설립된 초창기와 함께 개관한 기숙사는 학생들에게 쾌적한 주거시설 및 편의시설, 최첨단 시스템을 제공하여 학업 성취도를 높이고 공동생활의 기본의식을 고취시키기 위하여 건립된 기숙사입니다. 기숙사 배정식 날 모든 학생 여러분은 마법의 분류모자에 의해 학생 한 명 한 명의 특성에 가장 적합한 기숙사를 배정받을 수 있습니다. 연면적 8,805평 규모의 생활관은 다양한 형태의 호실을 통해 학생들의 요구에 부합하는 서비스를 제공합니다. 또한 호별 냉장고 제공, 세면실, 화장실 호실 내 설치로 사생들의 독립성을 최대한 보장하며, 기숙사내 다목적실, 자율학습실, 마법시행실, 세탁실 등을 설치하여 최고의 주거편의성을 누릴 수 있도록 하였습니다. 특히 최첨단의 출입통제시스템을 통해 입사생들의 안전하고 쾌적한 생활이 보장될 수 있도록 하였습니다</p>
+             </div>
+            <ul><li>기숙사 소개</li></ul>
+            <div id="bottom">
+                <div class="dormi_mark"><img  src="Gryffindor.png"></div>
+                <div class="dormi_show"><img  src="그리핀도르내부.jpg"></div>
+                <div class="dormi_mark"><img  src="Slytherin.png"></div>
+                <div class="dormi_show"><img  src="슬리데린내부.jpg"></div>
+                <div class="dormi_mark"><img  src="Ravenclaw.png"></div>
+                <div class="dormi_show"><img  src="레번클로내부.jpg"></div>
+                <div class="dormi_mark"><img  src="Hufflepuff.png"></div>
+                <div class="dormi_show"><img  src="허플퍼프내부.jpg"></div>
+            </div>
+        </main>
+    </body>
 </html>

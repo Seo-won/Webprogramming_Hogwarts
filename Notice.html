@@ -7,10 +7,46 @@
         <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
         <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
         <style>
-          body {
+            body {
                     background-color: rgb(75, 73, 71);
                     margin: 0 auto;                 
                 }
+            main h1{text-align: center; color:#fff; background-color: #811924; font-size: 30px;}      
+            #notice ul {
+                    margin: auto;
+                    width: 1250px;
+                    font-size: 20px;
+                    }
+            #notice ul li {
+                    line-height: 60px; /*li 세로 간격*/
+                    padding-left: 40px;
+                    }
+            #notice ul li:first-child {
+                    border-top: 2px solid #6a6a6a;
+                    border-bottom: 2px solid #6a6a6a;
+                    padding-left: 150px;
+                    font-size: 18px;
+                    }
+            #notice ul li:last-child {
+                    border-bottom: 1px solid #6a6a6a;
+                    }
+            #notice ul li:nth-child(2n) { 
+                    background: #47171956;
+                    border-radius: 20px;
+                    }
+            #notice ul li span {
+                    display: block;
+                    float: right;
+                    width: 150px;
+                    text-align: center;
+                    }
+            .number {text-align: center;  
+                    font-size: 30px;
+                    }
+            .number li{
+                   display: inline-block; 
+                   width: 30px;
+                    }
         </style>
     </head>
     <body><!--헤더안에 각자 수정할 부분 한군데 있음-->
@@ -33,9 +69,9 @@
                         <li><a href="http://jju0love.dothome.co.kr/Hogwart.html">기숙사소개</a></li>
                         </ul>
                     </li>
-                    <li><a href="#a">학부미리보기</a>
+                    <li><a href="#a">대도서관</a>
                         <ul>
-                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">학부미리보기</a></li>
+                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">대도서관</a></li>
                         </ul>
                     </li>
                     <li><a href="#a">공지사항</a>
@@ -47,10 +83,35 @@
                 </nav>
                 </div>
                 <div class="visual"><img src="http://bonozoa.dothome.co.kr/show5.png" alt=""></div><!--show뒤에 숫자 각자 파트에 맞춰서 바꿔줘-->
-                <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>학부미리보기:8-->
+                <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>대도서관:8-->
         </header>
         <main>
-            <!--여기에 각자 맡은파트 작성-->
+            <div id="notice">
+                <h1>공지사항</h1>
+                <br>
+                <ul>
+                    <li>내용<span>날짜</span></li>
+                    <li><a href="#">2021학년도 신입생 공지사항 [필독]</a><span>2021-02-28</span></li>           
+                    <li><a href="#">졸업생 초청 강연 - 해리 제임스 포터 </a><span>2021-01-24</span></li>
+                    <li><a href="#">기숙사 배정 관련 공지사항</a><span>2021-01-13</span></li>
+                    <li><a href="#">신입생 오리엔테이션 자료</a><span>2021-01-08</span></li>
+                    <li><a href="#">신입생 멘토링 프로그램 멘토 모집</a><span>2020-12-24</span></li>
+                    <li><a href="#">퀴디치 선수 모집</a><span>2021-11-18</span></li>
+                    <li><a href="#">약초학 연구실 연구조교 모집</a><span>2020-10-09</span></li>
+                    <li><a href="#">과목별 O.W.L. 합격자 명단</a><span>2020-06-26</span></li>
+                </ul>
+            </div>
+            <br>
+            <div>
+                <ul class="number">
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Notice.html">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+            <br>
         </main>
     </body>
 </html>

@@ -7,6 +7,42 @@
         <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
         <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
         <style>
+            main {
+            background-color: rgb(75, 73, 71);
+        }
+
+            main #top {
+                background-color: #811924;
+                color: white; 
+                text-align: center; font-size: 30px;
+            }
+
+            main section {
+                margin: 0 auto;
+                width: 1200px;
+                overflow: hidden;
+            }
+
+            main ul {
+                font-size: 1.5em;
+            }
+
+            main img {max-width: 100%; position:absolute;}
+            
+            .pic_professor { 
+                width: 300px; height: 300px;
+                float: left; margin-right: 10px;
+                margin-top: 5px; margin-left: 5px;
+                
+                position: relative; overflow:hidden;
+            }
+
+            .text_professor {
+                width: 1105px; height: 300px; margin: 10px 0;
+                color: black; background-color: rgb(241, 241, 241, 0.3);
+                border: 5px solid #811924;
+            }
+
 
         </style>
     </head>
@@ -47,41 +83,136 @@
                 <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>학부미리보기:8-->
         </header>
         <main>
-            <h2>교수진 소개</h2>
-    <table>
-        <tr>
-            <th><ul><li>교장</li></ul></th>
-        </tr>
-        <tr>
-            <td><img src="알버스_덤블도어.jfif"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><img src="미네르바_맥고나걸.jfif"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><img src="세베루스_스네이프.jfif"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><img src="루비우스_헤그리드.jfif"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><img src="덜로리스_제인_엄브리지.jfif"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><img src="롤랜다_후치.jfif"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><img src="포모나_스프라우트.png"></td>
-            <td></td>
-        </tr>
+            <h1 id="top">교수진 소개</h1>
+            <section>
+                <div class="pic_professor" style="margin-top: 15px;"><img src="알버스_덤블도어.jfif"></div>
+                <div class="text_professor">
+                     <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">알버스 덤블도어</span> 교장 선생</h1>
+                     <ul>
+                        <li>前 위즌가모트 영국 청년 대표</li>
+                        <li>前 호그와트 교수 / 어둠의 마법 방어법</li>
+                        <li>前 호그와트 교수 / 변환 마법</li>
+                        <li>現 제25대 호그와트 교장</li>
+                        <li>現 위즌가모트 최고위원장</li>
+                        <li>現 불사조 기사단 기사단장</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
 
-    </table>
+                <div class="pic_professor"><img src="미네르바_맥고나걸.jfif"></div>
+                <div class="text_professor" style="height: 224px;">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">미네르바 맥고나걸</span> 교감 선생</h1>
+                    <ul>
+                        <li>前 호그와트 기숙사 반장 / 그리핀도르</li>
+                        <li>前 호그와트 학생회장</li>
+                        <li>現 호그와트 교수 / 변환마법</li>
+                        <li>現 호그와트 기숙사 사감 / 그리핀도르</li>
+                        <li>現 제3대 호그와트 교감</li>
+                        <li>불사조 기사단 2기 단원</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="세베루스_스네이프.jfif" style="width:300px;"></div>
+                <div class="text_professor" style="height: 224px;">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">세베루스 스네이프</span> 교수</h1>
+                    <ul>
+                        <li>現 호그와트 기숙사 사감 / 슬리데린</li>
+                        <li>現 호그와트 교수 / 마법약</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="루비우스_헤그리드.jfif"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">루비우스 헤그리드</span> 교수</h1>
+                    <ul>
+                        <li>불사조 기사단 1기 단원</li>
+                        <li>現 호그와트 숲지기</li>
+                        <li>現 호그와트 교수 / 마법 생명체 돌보기</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="덜로리스_제인_엄브리지.jfif"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">덜로리스 제인 엄브리지</span> 교수</h1>
+                    <ul>
+                        <li>現 마법 정부 총리 비서실 실장</li>
+                        <li>現 머글 태생 등록 위원회 위원장</li>
+                        <li>現 호그와트 교수 / 어둠의 마법 방어법</li>
+                        <li>現 호그와트 장학관</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="롤랜다_후치.jfif"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">롤랜다 후치</span> 교수</h1>
+                    <ul>
+                        <li>現 호그와트 교수 / 비행술</li>
+                        <li>現 호그와트 퀴디치 심판</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="포모나_스프라우트.png"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">포모나 스프라우트</span> 교수</h1>
+                    <ul>
+                        <li>現 호그와트 교수 / 약초학</li>
+                        <li>現 호그와트 기숙사 사감 / 후플푸프</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="시빌_트릴로니.jfif"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">시빌 트릴로니</span> 교수</h1>
+                    <ul>
+                        <li>現 호그와트 교수 / 점술</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="커스버트_빈즈.jpg"></div>
+                <div class="text_professor" style="height: 285px;">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">커스버트 빈즈</span> 교수</h1>
+                    <ul>
+                        <li>現 호그와트 교수 / 마법의 역사</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="필리우스_플리트윅.png"></div>
+                <div class="text_professor" style="height: 234px;">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">필리우스 플리트윅</span> 교수</h1>
+                    <ul>
+                        <li>現 호그와트 교수 / 일반 마법</li>
+                        <li>現 호그와트 기숙사 사감 / 래번클로</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+                <div class="pic_professor"><img src="포피_폼프리.png"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">포피 폼프리</span> 병동 간호사</h1>
+                    <ul>
+                        <li>現 호그와트 병동 간호사</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+
+
+                <div class="pic_professor"><img src="아거스_필치.jfif"></div>
+                <div class="text_professor">
+                    <h1><span style="text-shadow: 3px 3px 5px #811924; font-size: 1.5em;">아거스 필치</span> 관리인</h1>
+                    <ul>
+                        <li>現 호그와트 관리인</li>
+                    </ul>
+                </div>
+                <div style="margin: 80px;"></div>
+            </section>
         </main>
     </body>
 </html>

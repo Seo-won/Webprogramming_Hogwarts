@@ -7,6 +7,9 @@
         <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
         <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
         <style>
+            /*마우스커서*/
+            * {cursor: url(https://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;} 
+            
             body {
                     background-color: rgb(75, 73, 71);
                     margin: 0 auto;                 
@@ -21,22 +24,21 @@
                 font-size: 30px;
                 box-shadow: 5px 5px 7px #00000054;
             }
-            table { 
-                background-color: blanchedalmond;
+            main img { width: 300px; height: 200px; display: block; padding: 0px 0px 10px 0px;}
+            .card {
+                width: 300px;
+                height: 330px;
+                margin: 30px 0px 30px 90px;
+                padding: 10px;
+                display: inline-block;
+                background-color: rgba(255, 235, 205, 0.404);
+                
+                color: black;
+                overflow: hidden;
+            }
+            main h2{
                 text-align: center;
-                margin: auto;
-                font-size: 15px;
-                width: 1250px;
-                border-color: brown;
-                }
-            .firstCol { 
-                width: 230px;
-            }
-            .secondCol {
-                width:  300px;
-            }
-            th {
-                background-color: rgb(219, 199, 173);
+                padding: 0px 5px 5px 10px;
             }
         </style>
     </head>
@@ -77,137 +79,104 @@
                 <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>학부미리보기:8-->
         </header>
         <main>
-            <h1>수업 소개</h1>
-            <div class="head"></div>
-            <div class="container" id="container1">
-                <div class=subjectTitle id="commonSubject">1~5학년 공통과정</div>
-                <div class="content" id="commonSubjectList">
-                    <table border="5">
-                        <thead>
-                            <tr>
-                                <th class="commonSubjectFirstCol" id="subjectName">교과목 이름</th>
-                                <th>담당 교수</th>
-                                <th>교과목 개요 및 설명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="firstCol">비행술<br>(Flights)</td>
-                                <td class="secondCol">후치 부인(Madame Hooch)</td>
-                                <td>1학년 때만 배우는 과목으로 야외 수업으로 이루어져 있다.</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">일반 마법<br>(Charms)</td>
-                                <td class="secondCol">필리우스 플리트윅(Filius Flitwick)</td>
-                                <td>래번클로 사감이자 고블린 혼혈인 플리트윅 교수의 수업이다.<br> 마법에 대한 이론을 배우며 주문 사용을 연습하는 시간으로 이루어져 있다. 대상에 특성을 부가하는 주문을 다루는 과목이다.</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol" rowspan="2">마법약<br>(Potions)</td>
-                                <td>호레이스 슬러그혼(Horace Slughorn)</td>
-                                <td rowspan="2">마법약 제조에 필요한 지식과 실질적인 기술을 배운다.<br> 마법약은 재료가 하나씩 들어갈 때마다 섞이고 작용하는 데 제작자의 마력을 필요로 한다.</td>
-                            </tr>
-                            <tr>
-                                <td>세베루스 스네이프(Severus Snape)</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">마법의 역사<br>(History of Magic)</td>
-                                <td class="secondCol">커스버트 빈스(Cuthbert Binns)</td>
-                                <td class="secondCol">호그와트에서 가장 지루한 수업으로 공통 필수 과목이다.<br> 참고로 교수가 유령이라 문이 아닌 칠판으로 들어온다. 빈스 교수는 죽은 날조차 자기가 죽은 것도 잊은 채 수업에 들어왔다. </td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">변신술<br>(Transfigurations)</td>
-                                <td class="secondCol">미네르바 맥고나걸(Minerva Mcgonagall)</td>
-                                <td> 그리핀도르 사감인 맥고나걸 교수의 담당 수업이다. 변환 마법 이론과 주문을 배운다. <br>영문이름인 Transfigurations는 모양을 바꾼다는 의미로, 실제 책에서 나오는 수업 내용도 변신과 변형 모두를 다루고 있다. <br>정확히는 5학년 때까지 공통으로 변형술을 배우고 6학년 이후 고급 과정에서 변신을 배우게 된다.</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">약초학<br>(Herbology)</td>
-                                <td class="secondCol">포모나 스프라우트(Pomona Sprout)</td>
-                                <td>후플푸프 사감인 스프라우트 교수가 담당하는 과목으로여러 마법 식물들에 대한 지식과 이를 다루는 법을 배운다. <br>비행 수업과 더불어  주로 온실에서 야외 수업으로 진행된다. 과목 특성상 마법약 수업과 관련이 깊다.</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">어둠의 마법 방어술<br>(Defence against the Dark Arts)</td>
-                                <td class="secondCol">-</td>
-                                <td>어둠의 마법에 대한 방어 기술, 위험한 마법 생물들에 대처하는 법, 그리고 실질적인 마법 격투술 등을 포함하는 과목이다. <br>담당 교수가 매년 사건이나 사고가 터져서 바뀌게 되는 징크스가 있다. <br>볼드모트가 알버스 덤블도어로부터 이 수업의 교수 임용을 거절당한 뒤로 이런 징크스가 생겼다고 한다. </td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">천문학<br>(Astronomy)</td>
-                                <td class="secondCol">오로라 시니스트라(Aurora Sinistra)</td>
-                                <td>유일하게 머글 세계와 비슷한 과목이다. <br>다만 별들을 연구하는 것 자체가 목적인 머글 천문학과는 다르며, 별들의 움직임을 보고 현재 일어나고 있는 일들을 파악한다. 점성술(Astrology)과는 다른 점은 별들의 움직임을 보고 현재의 상황을 알 수 있지만, 미래를 예측할 수는 없다.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <h1>수업 소개</h1> 
+            <div class=subjectTitle id="commonSubject">1~5학년 공통과정</div>
+                <div class="card">
+                    <img src="비행술3.jpg">
+                    <h2>비행술(Flights)</h2>
+                    <p>후치 부인(Madame Hooch)</p>
+                    <p>1학년 때만 배우는 과목으로 야외 수업으로 이루어져 있다.</p>
                 </div>
-            </div>    
-            <div class="container" id="container2">
-                <div class=subjectTitle id="electiveSubject">3학년 이후 선택과목</div>
-                <div class="content" id="electiveSubjectList">
-                    <table border="5">
-                        <thaed>
-                            <tr>
-                                <th class="firstCol">교과목 이름</th>
-                                <th class="secondCol">담당 교수</th>
-                                <th>교과목 개요 및 설명</th>
-                            </tr>
-                        </thaed>
-                        <tbody>
-                            <tr>
-                                <td class="firstCol">고대 룬 문자<br>(Study of Ancient Runes)</td>
-                                <td class="secondCol">배쉬다 배블링(Bathsheda Babbling)</td>
-                                <td>3학년 이후 선택 과목으로, 고대 룬 문자를 읽거나 암호화된 룬을 해석하는 법을 배운다. <br>호그와트에 개설된 수업 중 가장 이론적인 수업이다.</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol" rowspan="3"> 머글 연구<br>(Muggle Studies)</td>
-                                <td class="secondCol">퀴리너스 퀴렐(Quirinus Quirrell)</td>
-                                <td rowspan="3">마법 사회의 입장에서 머글의 사회와 기술 등에 대해 배우는 과목이다.<br> 기본적으로 머글에 대해 잘 모르는 학생이 주 대상.</td>
-                            </tr>
-                            <tr><td>채러티 벌베이지(Charity Burbage)</td></tr>
-                            <tr><td>알렉토 캐로우(Alecto Carros)</td></tr>
-                            <tr>
-                                <td class="firstCol">산술점<br>(Arithmancy)</td>
-                                <td class="secondCol">셉티마 벡터(Septima Vector)</td>
-                                <td>수학적 공식과 그래프를 통해 미래를 예측하는 방법을 배운다. 또한 숫자의 마법적 성질을 배운다. </td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol" rowspan="3">신비한 동물 돌보기<br>(Care of Magical Creatures)</td>
-                                <td class="secondCol">실바너스 캐틀번(Silvanus Kettleburn)</td>
-                                <td rowspan="3">여러가지 신비한 마법 생물들에 대해 배우고 이들을 다루고 돌보는 방법을 실습하는 과목이다. <br>이 교과목의 교과서인 신비한 동물 사전의 저자가 바로 뉴트 스캐맨더이다. <br>수업 특성상 야외수업이 되는 경우가 많은 편.</td>
-                            </tr>
-                            <tr><td>루베우스 해그리드(Rubeus Hagrid)</td></tr>
-                            <tr><td>빌헬미나 그루블리플랭크(Wilhelmina Grubbly-Plank)</td></tr>
-                            <tr>
-                                <td class="firstCol">점술<br>(Divination)</td>
-                                <td class="secondCol">사이빌 트릴로니(Sybill Trelawney), 피렌체(Firenze)</td>
-                                <td>미래의 일을 예측하는 여러가지 점술에 대해 배운다.</td>
-                            </tr>
-                            <tr>
-                                <td class="firstCol">연금술<br>(Alchemy)</td>
-                                <td class="secondCol">-</td>
-                                <td>6학년 이상부터 들을 수 있는 과목이다. <br>매년 개설되는 수업은 아니고, N.E.W.T.를 충족하는 일정 수 이상의 학생이 지원해야만 제공된다.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card">
+                    <img src="일반마법수업.jpg">
+                    <h2>일반 마법(Charms)</h2>
+                    <p>필리우스 플리트윅(Filius Flitwick)</p>
+                    <p>래번클로 사감이자 고블린 혼혈인 플리트윅 교수의 수업.마법에 대한 이론을 배우며 주문 사용을 연습하는 시간으로 이루어져 있다. 대상에 특성을 부가하는 주문을 다루는 과목.</p>
                 </div>
-            </div>    
-            <div class="container" id="container3">
-                <div class=subjectTitle id="test">시험</div>
-                <div class="content" id="test">
-                    <table border="5">
-                       <thead></thead>
-                       <tbody>
-                           <tr>
-                               <td class="firstCol">표준 마법사 시험<br>(O.W.L.)</td>
-                               <td>호그와트 5학년생들이 응시하는 시험. 마법 정부의 마법 시험 관리국 주관 하에 치러진다. <br> 해당 학생이 치른 O.W.L. 성적에 따라 향후 수업을 계속 들을 수 '있는지 없는지'를 가려내며, 직업 선택에 있어서도 중요하다. <br>대부분의 시험은 필기시험과 실기시험으로 나누어지며 2주 동안 연속적으로 실시된다. <br>오전에는 이론시험을, 오후에는 실기시험을 실시하며, 천문학 실기시험은 과목 특성상 야간에 실시한다.</td>
-                           </tr>
-                           <tr>
-                               <td class="firstCol">고난도 마법사 시험<br>(N.E.W.T.)</td>
-                               <td>호그와트 졸업학년인 7학년때 치르는 시험으로 O.W.L.의 상위 레벨 시험. <br>학력에 관한 부분만 다루는 게 아니라 실제 직업에서 활용되는 능력, 즉, 마법을 직접적으로 테스트한다는 점에서 더욱 중요한 시험이다.</td>
-                           </tr>
-                       </tbody>
-                    </table>
+                <div class="card">
+                    <img src="마법약수업.jpg">
+                    <h2>마법약(Potions)</h2>
+                    <p>호레이스 슬러그혼(Horace Slughorn), 세베루스 스네이프(Severus Snape)</p>
+                    <p>마법약 제조에 필요한 지식과 실질적인 기술을 배운다.<br> 마법약은 재료가 하나씩 들어갈 때마다 섞이고 작용하는 데 제작자의 마력을 필요로 한다.</p>
+                </div>
+                <div class="card">
+                    <img src="마법의 역사.jpg">
+                    <h2>마법의 역사(History of Magic)</h2>
+                    <p>커스버트 빈스(Cuthbert Binns)</p>
+                    <p>호그와트에서 가장 지루한 수업으로 공통 필수 과목이다. 참고로 교수가 유령이라 문이 아닌 칠판으로 들어온다. 빈스 교수는 죽은 날조차 자기가 죽은 것도 잊은 채 수업에 들어왔다.</p>
+                </div>
+                <div class="card">
+                    <img src="변신술.jpg">
+                    <h2>변신술(Transfigurations)</h2>
+                    <p>미네르바 맥고나걸(Minerva Mcgonagall)</p>
+                    <p>변환 마법 이론과 주문을 배운다. Transfigurations는 모양을 바꾼다는 의미로, 실제 책에서 나오는 수업 내용도 변신과 변형 모두를 다루고 있다. 정확히는 5학년 때까지 공통으로 변형술을 배우고 6학년 이후 고급 과정에서 변신을 배우게 된다.</p>
+                </div>
+                <div class="card">
+                    <img src="약초학.jpg">
+                    <h2>약초학(Herbology)</h2>
+                    <p>포모나 스프라우트(Pomona Sprout)</p>
+                    <p>후플푸프 사감인 스프라우트 교수가 담당하는 과목으로여러 마법 식물들에 대한 지식과 이를 다루는 법을 배운다. 비행 수업과 더불어  주로 온실에서 야외 수업으로 진행된다. 과목 특성상 마법약 수업과 관련이 깊다.</p>
+                </div>
+                <div class="card">
+                    <img src="어둠의 마법 방어술.jpg">
+                    <h2>어둠의 마법 방어술 <br>(Defence against the Dark Arts)</h2>
+                    <p>어둠의 마법에 대한 방어 기술, 위험한 마법 생물들에 대처하는 법, 그리고 실질적인 마법 격투술 등을 포함하는 과목이다. 볼트모트가 임용 거절 당한 후, 담당 교수가 매년 사건이나 사고가 터져서 바뀌게 되는 징크스가 있다. </p>
+                </div>
+                <div class="card">
+                    <img src="천문학.jpg">
+                    <h2>천문학(Astronomy)</h2>
+                    <p>오로라 시니스트라(Aurora Sinistra)</p>
+                    <p>유일하게 머글 세계와 비슷한 과목. 다만 별들을 연구하는 것 자체가 목적인 머글과 다르며, 별들의 움직임을 보고 현재 일어나고 있는 일들을 파악. 점성술과 다른 점은 별들의 움직임을 보고 현재의 상황을 알 수 있지만, 미래를 예측할 수는 없다.</p>
+                </div>
+
+            <div class=subjectTitle id="electiveSubject">3학년 이후 선택과목</div>
+                <div class="card">
+                    <img src="고대 룬 문자.jpg">
+                    <h2>고대 룬 문자 <br>(Study of Ancient Runes)</h2>
+                    <p>배쉬다 배블링(Bathsheda Babbling)</p>
+                    <p>3학년 이후 선택 과목으로, 고대 룬 문자를 읽거나 암호화된 룬을 해석하는 법을 배운다. 호그와트에 개설된 수업 중 가장 이론적인 수업이다.</p>
+                </div>
+                <div class="card">
+                    <img src="머글 연구.jpg">
+                    <h2>머글 연구(Muggle Studies)</h2>
+                    <p>퀴리너스 퀴렐(Quirinus Quirrell), 채러티 벌베이지(Charity Burbage), 알렉토 캐로우(Alecto Carros)</p>
+                    <p>마법 사회의 입장에서 머글의 사회와 기술 등에 대해 배우는 과목이다.<br> 기본적으로 머글에 대해 잘 모르는 학생이 주 대상.</p>
+                </div>
+                <div class="card">
+                    <img src="산술점.jpg">
+                    <h2>산술점(Arithmancy)</h2>
+                    <p>셉티마 벡터(Septima Vector)</p>
+                    <p>수학적 공식과 그래프를 통해 미래를 예측하는 방법을 배운다. 또한 숫자의 마법적 성질을 배운다.</p>
+                </div>
+                <div class="card">
+                    <img src="신비한 동물 돌보기.jpg">
+                    <h2>신비한 동물 돌보기<br>(Care of Magical Creatures)</h2>
+                    <p>실바너스 캐틀번(Silvanus Kettleburn), 루베우스 해그리드(Rubeus Hagrid), 빌헬미나 그루블리플랭크(Wilhelmina Grubbly-Plank)</p>
+                    <p>여러가지 신비한 마법 생물들에 대해 배우고 이들을 다루고 돌보는 방법을 실습하는 과목이다. <br>이 교과목의 교과서인 신비한 동물 사전의 저자가 바로 뉴트 스캐맨더이다. 수업 특성상 야외수업이 되는 경우가 많은 편.</p>
+                </div>
+                <div class="card">
+                    <img src="점술.jpg">
+                    <h2>점술(Divination)</h2>
+                    <p>사이빌 트릴로니(Sybill Trelawney), 피렌체(Firenze)</p>
+                    <p>미래의 일을 예측하는 여러가지 점술에 대해 배운다.</p>
+                </div>
+                <div class="card">
+                    <img src="마법약.jpg">
+                    <h2>연금술(Alchemy)</h2>
+                    <p>6학년 이상부터 들을 수 있는 과목이다. 매년 개설되는 수업은 아니고, N.E.W.T.를 충족하는 일정 수 이상의 학생이 지원해야만 제공된다.</p>
+                </div>
+
+            <div class=subjectTitle id="test">시험</div>
+                <div class="card">
+                    <img src="표준 마법사 시험.jpg">
+                    <h2>표준 마법사 시험(O.W.L.)</h2>
+                    <p>호그와트 5학년생들이 응시하는 시험. 마법 정부의 마법 시험 관리국 주관 하에 치러짐. 이 성적에 따라 향후 수업을 계속 들을 수 '있는지 없는지'를 가려내며, 직업 선택에 있어서도 중요하다. 대부분의 시험은 필기와 실기로 나눠지며 2주 동안 오전에는 이론, 오후에는 실기, 천문학 실기는 야간에 실시한다.</p>
+                </div>
+                <div class="card">
+                    <img src="고난도 마법사 시험.PNG">
+                    <h2>고난도 마법사 시험(N.E.W.T.)</h2>
+                    <p>호그와트 졸업학년인 7학년때 치르는 시험으로 O.W.L.의 상위 레벨 시험. 학력에 관한 부분 뿐만 아니라 실제 직업에서 활용되는 능력, 즉, 마법을 직접적으로 테스트한다는 점에서 더욱 중요한 시험.</p>
                 </div>
             </div>
-            <br>
-            <br> 
         </main>
     </body>
-</html>

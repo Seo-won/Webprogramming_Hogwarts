@@ -8,24 +8,303 @@
 	<script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
 </head>
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Sans+KR:wght@300&display=swap');
 	body {
-    margin: 0 auto;
-    width: 960px;
-    background-color: gray;
+		margin: 0 auto;
+		width: 100%;
+		background-color: rgb(75, 73, 71);
+		}
+		
+	a.go_to_top{
+		position: fixed;
+		bottom: 100px;
+		right: 0;
+		display: block;
+		width: 64px;
+		height: 54px;
+		background-color: #fff;
+		border: 1px solid #1f54a2;
+		border-right: 0px;
+		border-top-left-radius: 7px;
+		border-bottom-left-radius: 7px;
+		font-size: 45px;
+		text-align: center;
+		line-height: 50px;
+		transition: ease all .3s;
+		z-index: 10;
 	}
-	.middle {
-	font-family: Noto Sans KR,Malgun Gothic,Apple SD Gothic NEO,gulim,dotum,sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    word-break: keep-all;
-    word-wrap: break-word;
 
+	a.go_to_top img{
+		width: 30px;
+		padding-bottom: 10px;
+	}
+
+	div.form{
+		margin: 0 auto;
+		height: 90px;
+		width: 1300px;
+		position: relative;
+		padding: 15px 0;
+		background: linear-gradient(180deg,#53555d 0,#494b51);
+		border: 1px solid #3f4147;
+		border-bottom-color: #23252e;;
+
+	}
+
+	.form>div:not(.bt)>span:first-child {
+		width: 96px;
+		text-align: right;
+		margin-right: 10px;
+		color: #fff;
+		padding-left:  50px;
+		font-size: 15px;
+		display: inline;
+	}
+	input[type=text] {
+		width: 300px;
+		height: 37px;
+		background-color: #3f4147;
+		box-sizing: border-box;
+		border: 1px solid #373737;
+		line-height: 35px;
+		vertical-align: middle;
+		font-size: 14px;
+		color: #fff;
+		display: inline;
+	}
+
+	div.category {
+		padding: 30px 0px 0px 50px;
+		font-size: 14px;
+	}
+
+	input[type="radio"] {
+		background-color: initial;
+		cursor: default;
+		appearance: radio;
+		box-sizing: border-box;
+		margin: 3px 3px 0px 5px;
+		padding: initial;
+		border: initial;
+
+	}
+
+	.category label[data-selected=selected] {
+		background-color: #3f4147;
+		color: #fff;
+	}
 	
+	 
+	.category label {
+		width: 30px;
+		height: 50px;
+		background-color: #e8e8e8;
+		box-sizing: border-box;
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		line-height: 1.2;
+		text-align: center;
+		cursor: pointer;
+		font-size: 15px;;
+	}
+	label {
+		cursor: default;
+	}
+
+
+	div.name {
+		display: inline;
+
+	}
+	.form>.bt {
+		display: block;
+		position: absolute;
+		right: 30px;
+		top: 15px;
+		padding-left: 16px;
+		text-align: center;
+		border-left: 1px solid #45484e;
+	}
+	 .form>.bt .button--submit {
+		width: 160px;
+		height: 40px;
+		background: linear-gradient(180deg,#9452fd 0,#743acf);
+		box-sizing: border-box;
+		font-size: 18px;
+		color: #fff;
+	}
+
+	main #top {text-align: center; color:#fff; background-color: #811924; font-size: 30px;}
+
+	main header {
+		background-color: rgb(241, 241, 241, 0.3);
+		margin: 20px 30px; padding: 30px 30px;
+		text-align: center;
+		color: black;
+		font-size: 30px;
+		box-shadow: 5px 5px 7px #00000054;
+	}
+	div.content {
+		overflow: hidden;
+		margin: 20px 0;
+		margin: 0 auto;
+		width: 1300px;
+	}
+	div.list {
+		background-color: blanchedalmond;
+		text-align: center;
+		margin: auto;
+		font-size: 15px;
+		width: 1300px;
+		border-color: brown;
+
+	}
+	div.list--name{
+		color:#fff;
+		background-color: #811924;
+	}
+	div.list--title{
+		background-color: #dbc7ad;
+	}
+	div.list-box {
+		margin: 0 auto;
+		overflow-y: auto;
+		width: 100%;
+		height: 200px;
+		box-sizing: border-box;
+		
+	}
+
+	div.list-box li:hover{
+		background-color: #dbc7ad;
+	}
+	
+
+	#infor{
+		width: 1000px;
+		margin: 0 auto;
+		text-align:center;
+		padding-bottom: 30px;
+		border: 3px solid brown;
+		background-color: blanchedalmond;
+		
+	}
+
+	.picture img{
+		width: 400px;
+	}
+
+
+	div.picture{
+		position: relative;
+		width: 960px;
+		text-align: center;
+		margin:0px auto 0px auto;
+		overflow: hidden;
+		margin-top: 50px;
+	}
+
+div.information{
+		width: 500px;
+		margin: 0px 20px 20px 20px;
+		float: right;
+	
+	}
+
+div.information h3{
+		font-size: 40px;
+		color: black;
+
+	}
+
+div.information p{
+		text-align: left;
+		font-size: 15px;
+		margin-top: 25px;
+		color: black;
+	}
+
+
+
+#Billywig img{
+	width: 275px;
 }
+
+#Blast-Ended-Skrewt img{
+	width: 350px;
+}
+
+#Demiguise img{
+	width: 250px;
+}
+
+#Diricawl img{
+	width: 330px;
+}
+
+#Fwooper img{
+	width: 225px;
+}
+
+#Golden-Snidget img{
+	width: 270px;
+}
+
+#Kelpie img{
+	width: 300px;
+}
+
+#Merpeople img{
+	width: 300px;
+}
+
+#Runespoor img{
+	width: 300px;
+}
+
+#footer{
+	margin-top: 50px;
+	height: 80px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width:100%;
+	background-color: #eeeeee;
+	position: relative;
+	overflow: auto;
+	border-top: 1px solid rgb(241, 241, 241, 0.3);
+
+}
+#footer div.footer-container{
+	height: 80px;
+	display:flex;
+	padding-left: 100px;
+
+}
+
+#footer div.first-img img{
+	height: 80px;
+}
+
+#footer div.middle-word{
+	padding-left: 40px;
+	padding-top: 24px;
+	font-size: 14px;
+	text-align: left;
+}
+
+#footer div.last-img{
+	padding-top: 24px;
+	padding-left: 430px;
+}
+
+#footer div.last-img img{
+	width: 45px;
+}
+
 </style>
 <body>
-	<header>
+	<header id="top_of_top">
 		<h1><a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img src="http://bonozoa.dothome.co.kr/top_logo.png" alt="호그와트"></a></h1>
 		<h2 class="hide">대메뉴</h2>
 		<div id="inb">
@@ -57,23 +336,30 @@
 				</ul>
 			</nav>
 			</div>
+			<div class="visual"><img src="http://bonozoa.dothome.co.kr/show8.png" alt=""></div>
 		</header>
 
 	<div class="middle">
 		
 		<main>
-			<h2 class="title">
-				대도서관
-			</h2>
+			<div id="top">
+				<h4 class="title">
+					대도서관
+				</h4>
+			</div>
+
+			<header>마법 주문 & 신비한 동물 검색</header>
+
+			<div class = "content">
 			<div class="search">
-				<h3>도서관 검색</h3>
+
 				<form action>
 					<fieldset>
 						<div class="form">
 							<div class="name">
-								<span>이름</span>
-								<input type="text" name="book-name" class="input--book-name" placeholder="이름" autocomplete="off">
-								<button type="button" class="button--delete">삭제</button>
+								<span>자료 이름</span>
+								<input type="text" name="book-name" class="input--book-name" placeholder="자료 이름" autocomplete="off">
+								
 								<div class="word"></div>
 							</div>
 							<div class="bt">
@@ -81,352 +367,1209 @@
 									<button type="submit" class="button--submit">검색</button>
 								</span>
 							</div>
-						</div>
-						<div class="category">
-							<label>
-								<input type="radio" name="label--category" value="0" checked>
-								"전체"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1">
-								"A"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="200">
-								"B"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="300">
-								"C"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="400">
-								"D"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="500">
-								"E"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="600">
-								"F"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="700">
-								"G"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="800">
-								"H"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="900">
-								"I"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1000">
-								"J"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1100">
-								"K"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1200">
-								"L"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1300">
-								"M"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1400">
-								"N"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1500">
-								"O"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1600">
-								"P"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1700">
-								"Q"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1800">
-								"R"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="1900">
-								"S"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2000">
-								"T"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2100">
-								"U"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2200">
-								"V"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2300">
-								"W"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2400">
-								"X"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2500">
-								"Y"
-							</label>
-							<label>
-								<input type="radio" name="label--category" value="2600">
-								"Z"
-							</label>
+							<div></div>
+							<div class="category">
+								
+								<label>
+									<input type="radio" name="label--category" value="0" checked>
+									전체
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1">
+									A
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="200">
+									B
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="300">
+									C
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="400">
+									D
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="500">
+									E
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="600">
+									F
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="700">
+									G
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="800">
+									H
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="900">
+									I
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1000">
+									J
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1100">
+									K
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1200">
+									L
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1300">
+									M
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1400">
+									N
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1500">
+									O
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1600">
+									P
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1700">
+									Q
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1800">
+									R
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="1900">
+									S
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2000">
+									T
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2100">
+									U
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2200">
+									V
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2300">
+									W
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2400">
+									X
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2500">
+									Y
+								</label>
+								<label>
+									<input type="radio" name="label--category" value="2600">
+									Z
+								</label>
+							</div>
 						</div>
 					</fieldset>
 				</form>
 			</div>
 			<div class="book-contents">
 				<div class="list">
+					<div class="list--name">
 					<h3>
 						자료
 					</h3>
+				</div>
 					<div class="list-box">
 						<ul>
+							<div class="list--title">
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a class="book--link" data-key="#">
+									<span class="name">신비한 동물 목록</span>
+								</a>
+							</li>
+						</div>
+							<li>
+								<a href="#Acromantula" class="book--link" data-key="#">
 									<span class="name">Acromantula</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Augurey" class="book--link" data-key="#">
 									<span class="name">Augurey</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Basilisk" class="book--link" data-key="#">
+									<span class="name">Basilisk</span>
+								</a>
+							</li>
+							<li>
+								<a href="#Billywig" class="book--link" data-key="#">
 									<span class="name">Billywig</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Blast-Ended-Skrewt" class="book--link" data-key="#">
 									<span class="name">Blast-Ended Skrewt</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Bowtruckle" class="book--link" data-key="#">
 									<span class="name">Bowtruckle</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Centaur" class="book--link" data-key="#">
 									<span class="name">Centaur</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Common-Welsh-Green" class="book--link" data-key="#">
+									<span class="name">Common Welsh Green</span>
+								</a>
+							</li>
+							<li>
+								<a href="#Demiguise" class="book--link" data-key="#">
 									<span class="name">Demiguise</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Diricawl" class="book--link" data-key="#">
 									<span class="name">Diricawl</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Doxy" class="book--link" data-key="#">
 									<span class="name">Doxy</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Erkling</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Erumpent" class="book--link" data-key="#">
 									<span class="name">Erumpent</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Fairy</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Fwooper" class="book--link" data-key="#">
 									<span class="name">Fwooper</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Gnome</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Golden-Snidget" class="book--link" data-key="#">
 									<span class="name">Golden Snidget</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Graphorn" class="book--link" data-key="#">
 									<span class="name">Graphorn</span>
 								</a>
 							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Griffin</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Grindylow</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Horned Serpent</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Hippocampus</span>
-								</a>
-							</li><li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Hippogriff" class="book--link" data-key="#">
 									<span class="name">Hippogriff</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Horned-Serpent" class="book--link" data-key="#">
+									<span class="name">Horned Serpent</span>
+								</a>
+							</li>
+							<li>
+								<a href="#Hungarian-Horntail" class="book--link" data-key="#">
+									<span class="name">Hungarian Horntail</span>
+								</a>
+							</li>
+							<li>
+								<a href="#Kelpie" class="book--link" data-key="#">
 									<span class="name">Kelpie</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Knarl</span>
+								<a href="#Merpeople" class="book--link" data-key="#">
+									<span class="name">Merpeople</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Kneazle</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Manticore</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Moke</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Mooncalf" class="book--link" data-key="#">
 									<span class="name">Mooncalf</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Murtlap" class="book--link" data-key="#">
 									<span class="name">Murtlap</span>
 								</a>
 							</li>
-							<var><li>
-								<a href="#" class="book--link" data-key="#">
+							<li>
+								<a href="#Niffler" class="book--link" data-key="#">
 									<span class="name">Niffler</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Norwegian-Ridgeback" class="book--link" data-key="#">
+									<span class="name">Norwegian Ridgeback</span>
+								</a>
+							</li>
+							<li>
+								<a href="#Nundu" class="book--link" data-key="#">
 									<span class="name">Nundu</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Phoenix" class="book--link" data-key="#">
 									<span class="name">Phoenix</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Pixie</span>
+								<a href="#Runespoor" class="book--link" data-key="#">
+									<span class="name">Runespoor</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Re'em</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">runespoor</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Snallygaster</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Sphinx</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Thunderbird" class="book--link" data-key="#">
 									<span class="name">Thunderbird</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Troll" class="book--link" data-key="#">
 									<span class="name">Troll</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Unicorn" class="book--link" data-key="#">
 									<span class="name">Unicorn</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="book--link" data-key="#">
+								<a href="#Werewolf" class="book--link" data-key="#">
 									<span class="name">Werewolf</span>
 								</a>
 							</li>
-							<li>
-								<a href="#" class="book--link" data-key="#">
-									<span class="name">Zouwu</span>
-								</a>
-							</li>
-						</var>
+
+							<div class="list--title">
+								<li>
+									<a class="book--link" data-key="#">
+										<span class="name">마법 주문 목록</span>
+									</a>
+								</li>
+							</div>
+						
 
 
 						</ul>
 					</div>
 				</div>
+			</div>
+			
+			</div>
 
-				<div class="bookinfo">
-					<h4>자료 정보</h4>
-					<div class="book--wrapper">
-						<div class="book--atteintion">
-							정보를 확인할 자료를 선택해주세요.
+			<div id="library--infor">
+					
+				<div id="Acromantula">
+				<header>Acromantula</header>
+				<div id="infor">
+					
+					<div class ="picture">
+						<img src="images/Acromantula.jpg"/> 
+
+
+						<div class="information">
+								<h3>Acromantula</h3>
+								
+								<p>
+									이름: 애크로맨툴라 <br>
+									등급: XXXXX	 <br>
+									사람의 말을 할 수 있을 정도의 지능을 지닌 거대 거미이다. 원산지는 보르네오 섬의 깊숙한 정골 속. 갓 알에서 태어났을 때는 강아지 정도의 크기이며 보통 성체는 말수준이다. 일반 거미랑은 다르게 사람을 집어올릴 수 있을 정도의 집게발을 지니고 있다.  대화가 가능할 정도의 지능을 지녔지만 매우 포악한 생물이라 위험도가 높다. 애크로맨툴라가 위험한 이유는 크기, 독, 공격성 등 여러가지 이유가 있지만 무엇보다도 무리를 지어다닌다는 특징 때문이다. 작은 코끼리만한 덩치에 지능도 뛰어난 애크로맨툴라가 여럿 뭉쳐 있는 무리는 드래곤 한 마리에 비견된다는 평이 있다.
+								</p>
+		
 						</div>
+						</div>
+
 					</div>
 				</div>
-			</div>
-			<div>
+				<div id="Augurey">
+
+					<header>Augurey</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Augurey.jpg"/> 
+
+
+							<div class="information">
+									<h3>Augurey</h3>
+									
+									<p>
+											이름: 어거레이 <br>
+											등급: XX <br>
+											검녹색 깃털을 가진 새. 별명은 아일랜드 불사조(Irish Pheonix). 비를 예견하고 특유의 비통한 울음소리를 내는 특징이 있다. 옛날에는 어거레이의 울음소리가 죽음을 예고한다고 알려졌었기 때문에 어거레이 울음소리를 듣고 두려워한 마법사들이 많았다고 전해진다. 그 후, 마법사들의 연구 끝에 이 울음소리는 그냥 비를 예견할 뿐이라는 것이 밝혀져, 기상 예측용으로 어거레이를 기르게 된 마법사들이 생겼다. 어거레이의 깃털은 잉크를 튕겨내는 성질이 있어 깃펜으로 만들 수 없다.
+											<br>
+											※호그와트 마법사 감별 깃펫은 이 새의 깃털로 만들어졌다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div id="Basilisk">
+
+					<header>Basilisk</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Basilisk.jpg"/> 
+
+
+							<div class="information">
+									<h3>Basilisk</h3>
+									
+									<p>
+											이름: 바실리스크 <br>
+											등급: XXXXX <br>
+											두꺼비의 품에서 부화된 수탉의 알에서 태어난 녹색빛을 띄고 노란 눈을 가진 거대한 뱀이다. 바실리스크의 가장 무서운 점은 시선으로, 두 눈을 마주치는 즉시 즉사한다. 시선 자체가 강력한 마력을 지닌 저주이다. 또 다른 위험 요소는 독. 세상에서 가장 강력한 독을 품은 날카롭고 거대한 송곳니를 지니고 있으며 독에 당하면 해독제는 불사조의 눈물뿐이기에 사실상 해독제가 없는 것이나 다름없다.
+											성체는 50피트에 달하며 드래곤과 같은 강도의 비늘로 전신이 덮여있어 대부분의 마법 주문이 튕겨나간다. 모든 거미들의 천적으로, 심지어 애크로맨툴라들마저 바실리스크를 두려워한다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div id="Billywig">
+
+					<header>Billywig</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Billywig.png"/> 
+
+
+							<div class="information">
+									<h3>Billywig</h3>
+									
+									<p>
+										이름: 빌리위그 <br>
+										등급: XXX <br>
+										광택 나는 푸른 빛깔의 곤충, 벌과 비슷하게 생겼다. 길이는 1.3cm가량이며 선명한 파란 빛의 몸을 가지고 있다. 색 때문에 눈에 띄기 쉬울 것 같지만 너무나 빠른 속도로 움직이기 때문에 마법사들조차 침에 쏘이기 전에는 알아차리지 못하는 일이 많다고 한다.
+
+										이 벌레의 꽁지에 있는 침에 쏘인 사람은 아찔한 현기증을 느끼면서 잠시 몸이 공중에 뜬다. 여러 번 찔리게 되면 그 부작용으로 둥둥 떠다니는 효과가 며칠 동안이나 지속되기도 하며, 간혹 빌리위그의 침에 심한 알러지 반응을 보여 이 몸이 둥둥 뜨는 상태가 영구적으로 지속되는 경우도 있다고 한다.
+										침은 약재나 마법사 세계의 과자인 피징 위즈비의 원료로 사용된다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Blast-Ended-Skrewt">
+
+					<header>Blast-Ended Skrewt</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Blast-Ended Skrewt.png"/> 
+
+
+							<div class="information">
+									<h3>Blast-Ended Skrewt</h3>
+									
+									<p>
+										이름: 폭탄꼬리 스크루트 <br>
+										등급: XXXXX <br>
+										마법사가 불게와 만티코어를 조합해 불법으로 만들어낸 위험생물이다. 외형은 전갈같은 꼬리에 껍질이 있는 모습이다. 불꽃을 뿜어내고 수컷은 침을 지니고 암컷은 피를 빠는 빨판을 지니고 있다. 성격이 흉폭해 자기들끼리 서로 죽이기 일쑤이다. 웬만한 주문은 그냥 껍질에 튕겨나갈 정도로 마법에 강한 저항력을 지녔다. 껍질이 덮이지 않은 배밑이 약점이다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Bowtruckle">
+
+					<header>Bowtruckle</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Bowtruckle.jpg"/> 
+
+
+							<div class="information">
+									<h3>Bowtruckle</h3>
+									
+									<p>
+										이름: 보우트러클 <br>
+										등급: XX <br>
+										나무에 사는 생물. 팔다리를 한쌍씩 가지고 있고 이족보행을 하는 인간형 생물로, 피부가 마치 나무로 이루어진 것처럼 생겼다. 자물쇠를 따는 재능이 뛰어나다. 
+										보우트러클이 사는 나무는 모두 마력을 가진 나무로, 이 때문에 보우트러클들이 사는 나무는 반드시 노려지기 마련이다. 보우트러클들은 자기가 사는 나무를 건드리면 굉장히 적대적으로 굴며 공격을 가해 오지만, 마법사들이 정중하게 부탁하면 지팡이 한두 개 만들 정도의 재료로 가지 몇개 정도는 내어준다고 한다. 쥐며느리 벌레를 좋아하나 간혹 요정의 알도 먹는다. 위에서 말한 정중한 부탁을 할 때도 나무에 기생하는 벌레를 주면서 하면 효과가 배가 된다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Centaur">
+
+					<header>Centaur</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Centaur.jpg"/> 
+
+
+							<div class="information">
+									<h3>Centaur</h3>
+									
+									<p>
+										이름: 켄타우로스 <br>
+										등급: XXXX <br>
+										사람의 상반신에 말의 하반신을 지닌 종족이다. 고도의 지능을 지니고 점성술과 같은 자신들만의 공동체와 문화를 지니고 있다. 
+										마법사 사회에서는 '짐승'으로 분류되는데, 이건 마법 생물에 대해 분류를 정할 당시 켄타우로스 측에서 그들이 꺼리는 흡혈귀(Vampire)나 마귀할멈(Hag) 같은 종족과 같은 부류가 되기 싫어해 '인류'로 분류되는 걸 거부했기 때문이다. 
+										자존심과 우월감이 강한 탓에 말처럼 인간을 태우는 것을 정말 싫어한다. 기본적으로 어느 편도 들지 않는 중립적 성향을 지녔다. 
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Common-Welsh-Green">
+
+					<header>Common Welsh Green</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Common Welsh Green.jpg"/> 
+
+
+							<div class="information">
+									<h3>Common Welsh Green</h3>
+									
+									<p>
+										이름: 커먼 웰시 그린 <br>
+										등급: XXXXX <br>
+										영국 웨일즈에 서식하고 초목이 무성한 산같은 환경을 선호한다. 용 중에서 가장 온순하고 말썽이 없는 종이며 성체의 크기는 약 18피트이다. 사람을 공격하기보단 양 같은 작은 포유류를 사냥한다. 
+										<br>※일프라콤 사건 <br>
+										1932년 영국 데일주의 일프라콤 해안을 습격했던 사건이 있다. 당시 해변은 일광욕 중인 사람들로 가득 차 있어서 대형 참사가 날 뻔 했는데 현장에서 일광욕 중이던 틸리 토크라는 마녀와 가족들이 마법을 사용해 머글들을 보호했다. 
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Demiguise">
+
+					<header>Demiguise</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Demiguise.jpg"/> 
+
+
+							<div class="information">
+									<h3>Demiguise</h3>
+									
+									<p>
+										이름: 데미가이즈 <br>
+										등급: XXXX <br>
+										백은빛의 길게 기른 털을 가진 초식동물인 데미가이즈는 마른 체형의 오랑우탄과 안경원숭이를 합친 것처럼 생긴 마법생물이다. 주로 극동에서 출현하나 몸을 투명하게 만들 수 있기에 발견하기 매우 어렵다. 
+										온순하기 때문에 인간에게 위협이 되지는 않지만 이 생물의 털로 투명망토를 만들 수 있어 데미가이즈의 가죽은 비싸게 매매된다. 
+										데미가이즈의 또 다른 특징으로는 확률에 기초하여 미래에 일어날 일을 볼 수 있다는 점이 있다. 
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Diricawl">
+
+					<header>Diricawl</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Diricawl.jpg"/> 
+
+
+							<div class="information">
+									<h3>Diricawl</h3>
+									
+									<p>
+										이름: 디리코울 <br>
+										등급: XX <br>
+										인도양의 모리셔스 섬에 서식하던 새로 아주 뚱뚱하며 몸 전체에 보풀보풀한 깃털이 달려 있다. 
+										새의 일종인 디리코울은 전혀 싸움을 할 줄 모르지만, 위험한 상황에 처했을 때 도망치는데에 탁월한 재주가 있다. 날개를 한 번 퍼덕거리면, 감쪽같이 다른 장소로 사라져버리는 능력을 갖고 있는 것이다. 
+										디리코울의 정체는 다름 아닌 도도. 무자비하게 남획을 하는 머글들은 도도가 멸종했다 알고 있기 때문에 아직 디리코울이 살아있다는 것은 비밀이다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Doxy">
+
+					<header>Doxy</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Doxy.png"/> 
+
+
+							<div class="information">
+									<h3>Doxy</h3>
+									
+									<p>
+										이름: 독시 <br>
+										등급: XXX <br>
+										요정으로 오인되는 생물이다. 요정처럼 작은 인간의 형상을 했지만 독이빨을 지닌데다가 팔다리가 여러 개 달렸으며 털이 온몸을 뒤엎고 있다. 
+										북아메리카나 북유럽에 서식하며 한번에 몇 백 개나 되는 알을 낳는다. 
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Erumpent">
+
+					<header>Erumpent</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Erumpent.png"/> 
+
+
+							<div class="information">
+									<h3>Erumpent</h3>
+									
+									<p>
+										이름: 에럼펀트 <br>
+										등급: XXXX <br>
+										아프리카에 서식하며 두꺼운 회색 가죽과 커다란 덩치를 지닌 동물이다. 두꺼운 가죽은 거의 모든 마법과 저주를 막으며 코에 달려있는 뿔은 날카로운 데다 폭발하는 액체가 담겨 있다. 뿔을 박아넣음으로써 마치 주사기처럼 폭발하는 액체를 안에 주사해넣을 수 있다. 덕분에 짝짓기 철에 수컷끼리 싸우다 폭발해 개체 수가 적다. 에럼펀트의 뿔은 폭발 때문에 엄격한 통제가 요구되는 B급 금지 품목이다.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Fwooper">
+
+					<header>Fwooper</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Fwooper.jpg"/> 
+
+
+							<div class="information">
+									<h3>Fwooper</h3>
+									
+									<p>
+										이름: 프우퍼 <br>
+										등급: XXX <br>
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Golden-Snidget">
+
+					<header>Golden Snidget</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Golden Snidget.png"/> 
+
+
+							<div class="information">
+									<h3>Golden Snidget</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="Graphorn">
+
+					<header>Graphorn</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Graphorn.jpg"/> 
+
+
+							<div class="information">
+									<h3>Graphorn</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				
+				<div id="Hippogriff">
+
+					<header>Hippogriff</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Hippogriff.jpg"/> 
+
+
+							<div class="information">
+									<h3>Hippogriff</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				
+				<div id="Horned-Serpent">
+
+					<header>Horned Serpent</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Horned Serpent.jpg"/> 
+
+
+							<div class="information">
+									<h3>Horned Serpent</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				
+				<div id="Hungarian-Horntail">
+
+					<header>Hungarian Horntail</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Hungarian Horntail.jpg"/> 
+
+
+							<div class="information">
+									<h3>Hungarian Horntail</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				
+				<div id="Kelpie">
+
+					<header>Kelpie</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Kelpie.jpg"/> 
+
+
+							<div class="information">
+									<h3>Kelpie</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				
+				<div id="Merpeople">
+
+					<header>Merpeople</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Merpeople.png"/> 
+
+
+							<div class="information">
+									<h3>Merpeople</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				<div id="Mooncalf">
+
+					<header>Mooncalf</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Mooncalf.png"/> 
+
+
+							<div class="information">
+									<h3>Mooncalf</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				<div id="Murtlap">
+
+					<header>Murtlap</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Murtlap.jpg"/> 
+
+
+							<div class="information">
+									<h3>Murtlap</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				<div id="Niffler">
+
+					<header>Niffler</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Niffler.jpg"/> 
+
+
+							<div class="information">
+									<h3>Niffler</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				<div id="Norwegian-Ridgeback">
+
+					<header>Norwegian Ridgeback</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Norwegian Ridgeback.jpg"/> 
+
+
+							<div class="information">
+									<h3>Norwegian Ridgeback</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				<div id="Nundu">
+
+					<header>Nundu</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Nundu.png"/> 
+
+
+							<div class="information">
+									<h3>Nundu</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+
+				<div id="Phoenix">
+
+					<header>Phoenix</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Phoenix.jpg"/> 
+
+
+							<div class="information">
+									<h3>Phoenix</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				
+				<div id="Runespoor">
+
+					<header>Runespoor</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Runespoor.jpg"/> 
+
+
+							<div class="information">
+									<h3>Runespoor</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				
+				<div id="Thunderbird">
+
+					<header>Thunderbird</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Thunderbird.jpg"/> 
+
+
+							<div class="information">
+									<h3>Thunderbird</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				<div id="Troll">
+
+					<header>Troll</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Troll.jpg"/> 
+
+
+							<div class="information">
+									<h3>Troll</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				
+				<div id="Unicorn">
+
+					<header>Unicorn</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Unicorn.png"/> 
+
+
+							<div class="information">
+									<h3>Unicorn</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				
+				<div id="Werewolf">
+
+					<header>Werewolf</header>
+					<div id="infor">
+						
+						<div class ="picture">
+							<img src="images/Werewolf.jpg"/> 
+
+
+							<div class="information">
+									<h3>Werewolf</h3>
+									
+									<p>
+											Salami venison porchetta, pastrami hamburger jerky beef boudin tenderloin ham hock pork
+											chop capicola tail cow. Tri-tip spare ribs boudin, ball tip hamburger brisket pork chop alcatra
+											fatback corned beef pork loin shankle. Pig salami beef ribs, pork chop pork belly cow brisket 
+											porchetta ground round biltong filet mignon hamburger venison pastrami. Porchetta swine ribeye
+											tongue chuck hamburger, bresaola fatback corned beef leberkas jowl kielbasa beef ribs. 
+											Cupim drumstick venison spare ribs ground round. Meatloaf turkey ball tip tri-tip shankle, 
+											cupim short loin pastrami chuck salami. Pork ham hock tri-tip, frankfurter corned beef short 
+											loin tail beef kielbasa pork belly capicola meatball.
+									</p>
+			
+							</div>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
-
 		</main>
+
+		<a href="#top_of_top" class="go_to_top">
+			<img src="images/arrow.png"/> 
+		</a>
 	</div>
+	<div id="footer">
+		<div class="footer-container">
+			<div class="first-img">
+				<a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img  src="images/social/logo.png" /></a>
+			</div>
+			<div class="middle-word">
+				<a>호그와트 주소</a>
+				<br>
+				<a>COPYRIGHT© 2021 HOGWARTS SCHOOL. ALL RIGHTS RESERVED.</a>
+			</div>
+			<div class="last-img">
+				<img src="images/social/facebook.jpg" />
+		
+				<img src="images/social/twitter.jpg"/>
+		
+				<img src="images/social/instagram.jpg"/>
+		
+				<img href="#guide" src="images/social/linkedin.jpg"/>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

@@ -7,6 +7,67 @@
         <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
         <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
         <style>
+            a.go_to_top{
+                position: fixed;
+                bottom: 100px;
+                right: 0;
+                display: block;
+                width: 64px;
+                height: 54px;
+                background-color: #fff;
+                border: 1px solid #1f54a2;
+                border-right: 0px;
+                border-top-left-radius: 7px;
+                border-bottom-left-radius: 7px;
+                font-size: 45px;
+                text-align: center;
+                line-height: 50px;
+                transition: ease all .3s;
+                z-index: 10;
+            }
+
+            a.go_to_top img{
+                width: 30px;
+                padding-bottom: 10px;
+            }
+            #footer{
+            margin-top: 50px;
+            height: 80px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            width:100%;
+            background-color: #d0d0d0;
+            position: relative;
+            overflow: auto;
+            border-top: 1px solid rgb(241, 241, 241, 0.3);
+
+            }
+            #footer div.footer-container{
+                height: 80px;
+                display:flex;
+                padding-left: 100px;
+
+            }
+
+            #footer div.first-img img{
+                height: 70px;
+            }
+
+            #footer div.middle-word{
+                padding-left: 40px;
+                padding-top: 18px;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            #footer div.last-img{
+                padding-top: 18px;
+                padding-left: 430px;
+            }
+
+            #footer div.last-img img{
+                width: 45px;
+            }
             /*마우스커서*/
             * {cursor: url(https://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;} 
             
@@ -63,7 +124,7 @@
         </style>
     </head>
     <body><!--헤더안에 각자 수정할 부분 한군데 있음-->
-        <header>
+        <header id="top_of_top">
             <h1><a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img src="http://bonozoa.dothome.co.kr/top_logo.png" alt="호그와트"></a></h1>
             <h2 class="hide">대메뉴</h2>
             <div id="inb">
@@ -98,6 +159,9 @@
                 <div class="visual"><img src="공지사항배경.jpg" alt=""></div><!--show뒤에 숫자 각자 파트에 맞춰서 바꿔줘-->
                 <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>대도서관:8-->
         </header>
+        <a href="#top_of_top" class="go_to_top">
+            <img src="http://shinheejin.dothome.co.kr/images/arrow.png"/> 
+        </a>
         <main>
             <div id="notice">
                 <h1>공지사항</h1>
@@ -108,24 +172,43 @@
                     <li><a href="http://dltk456.dothome.co.kr//Hogwarts/preparationForFreshmen.html">2021학년도 신입생 준비물 [필독]</a><span>2021-02-28</span></li>           
                     <li><a href="http://dltk456.dothome.co.kr//Hogwarts/invitationLectureForGraduates.html">졸업생 초청 강연 - 해리 제임스 포터 </a><span>2021-01-24</span></li>
                     <li><a href="http://dltk456.dothome.co.kr//Hogwarts/dormitoryAssignment.html">기숙사 배정 관련 공지사항</a><span>2021-01-13</span></li>
-                    <li><a href="#">신입생 오리엔테이션 자료</a><span>2021-01-08</span></li>
-                    <li><a href="#">신입생 멘토링 프로그램 멘토 모집</a><span>2020-12-24</span></li>
-                    <li><a href="#">퀴디치 선수 모집</a><span>2021-11-18</span></li>
-                    <li><a href="#">약초학 연구실 연구조교 모집</a><span>2020-10-09</span></li>
-                    <li><a href="#">과목별 O.W.L. 합격자 명단</a><span>2020-06-26</span></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">신입생 오리엔테이션 자료 (5일부터 열람 가능)</a><span>2021-01-08</span></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">신입생 멘토링 프로그램 멘토 모집</a><span>2020-12-24</span></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">퀴디치 선수 모집 (2학년 이상 지원 가능)</a><span>2021-11-18</span></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">약초학 연구실 연구조교 모집</a><span>2020-10-09</span></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">과목별 O.W.L. 합격자 명단 </a><span>2020-06-26</span></li>
                 </ul>
             </div>
             <br>
             <div>
                 <ul class="number">
                     <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Notice.html">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">2</a></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">3</a></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">4</a></li>
+                    <li><a href="http://dltk456.dothome.co.kr//Hogwarts/Loading.html">5</a></li>
                 </ul>
             </div>
             <br>
         </main>
+        <div id="footer">
+            <div class="footer-container">
+                <div class="first-img">
+                    <a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img  src="http://shinheejin.dothome.co.kr/images/social/logo.png" /></a>
+                </div>
+                <div class="middle-word">
+                    <a>호그와트 급행열차 세인트 판크라스역 9와 3/4 승강장</a>
+                    <br>
+                    <a>COPYRIGHT© 2021 HOGWARTS SCHOOL. ALL RIGHTS RESERVED.</a>
+                </div>
+                <div class="last-img">
+                    <a href="https://m.facebook.com/HogwartsLegacy/" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/facebook.jpg" /></a>
+    
+                    <a href="https://twitter.com/HogwartsLegacy" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/twitter.jpg"/></a>
+    
+                    <a href="https://www.instagram.com/hogwartslegacy/?hl=ko" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/instagram.jpg"/></a>
+    
+                    <a href="https://kr.linkedin.com/" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/linkedin.jpg"/></a>
+                </div>
     </body>
 </html>

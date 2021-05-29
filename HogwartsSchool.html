@@ -6,9 +6,94 @@
         <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/default.css">
         <link rel="stylesheet" type="text/css" href="http://bonozoa.dothome.co.kr/HogwartsSchool.css"> <!--http://bonozoa.dothome.co.kr/HogwartsSchool.css-->
         <script type="text/javascript" src="http://bonozoa.dothome.co.kr/HogwartsSchool.js"></script>
+        <style>
+            * {cursor: url(https://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;}
+            body { background-color: rgb(75, 73, 71); }
+            #footer{
+                margin-top: 50px;
+                height: 80px;
+                padding-top: 35px;
+                padding-bottom: 35px;
+                width:100%;
+                background-color: #d0d0d0;
+                position: relative;
+                overflow: auto;
+                border-top: 1px solid rgb(241, 241, 241, 0.3);
+
+            }
+            #footer div.footer-container{
+                height: 80px;
+                display:flex;
+                padding-left: 100px;
+
+            }
+
+            #footer div.first-img img{
+                height: 70px;
+            }
+
+            #footer div.middle-word{
+                padding-left: 40px;
+                padding-top: 18px;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            #footer div.last-img{
+                padding-top: 18px;
+                padding-left: 430px;
+            }
+
+            #footer div.last-img img{
+                width: 45px;
+            }
+            a.go_to_top{
+                position: fixed;
+                bottom: 100px;
+                right: 0;
+                display: block;
+                width: 64px;
+                height: 54px;
+                background-color: #fff;
+                border: 1px solid #1f54a2;
+                border-right: 0px;
+                border-top-left-radius: 7px;
+                border-bottom-left-radius: 7px;
+                font-size: 45px;
+                text-align: center;
+                line-height: 50px;
+                transition: ease all .3s;
+                z-index: 10;
+            }
+
+            a.go_to_top img{
+                width: 30px;
+                padding-bottom: 10px;
+            }
+
+            #middle{overflow: hidden;}
+            #mainp{float:left; width:50%;background: #7D7C7B;}
+            #mainp h1{text-align: center; color:#fff; background-color: #811924; font-size: 30px; }
+            #mainp h2{margin: 8px; font-size: 23px; color:black;}
+            #mainp .box{ width: 300px; height: 50px; background-color: #4D4C4B; border-radius: 0 15px 15px 0;}
+            #mainp .good{overflow:hidden;}
+            #mainp h3{line-height: 50px;  margin: 20px; font-size: 23px; color:white;}
+            #mainp p{margin: 8px; font-size:15px; color:black;}
+            #mainp img{margin: 8px; width: 250px; height: 250px; float: left;  border: 4px solid #4D4C4B; }
+            #mainp h4{margin: 8px; font-size: 20px; color:black;}
+            #mainp h5{margin: 8px; font-size: 20px; color:black;}
+            #side{float:right; width: 50%; }
+            #youtubep{background: #7D7C7B;  border-left: 0.5px solid rgb(255,255,255);}
+            #youtubep h1{ text-align: center; color:#fff; background-color: #811924; font-size: 30px;}
+            #youtubep a:hover { color:#811924; text-decoration: underline;}
+            #youtubep h2{font-size: 25px; color:black;}
+            #youtubep p{font-size:17px; color:black;}
+            #mapp h1{ text-align: center; color:#fff;  border-left: 0.5px solid rgb(255,255,255); background-color: #811924; font-size: 30px;}
+            #mapp .view{text-align: center;}
+        </style>
     </head>
-    <body><!--헤더안에 각자 수정할 부분 한군데 있음-->
-        <header>
+    <body>
+        <header id="top_of_top">
             <h1><a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img src="http://bonozoa.dothome.co.kr/top_logo.png" alt="호그와트"></a></h1>
             <h2 class="hide">대메뉴</h2>
             <div id="inb">
@@ -27,9 +112,9 @@
                         <li><a href="http://jju0love.dothome.co.kr/Hogwart.html">기숙사소개</a></li>
                         </ul>
                     </li>
-                    <li><a href="#a">학부미리보기</a>
+                    <li><a href="#a">대도서관</a>
                         <ul>
-                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">학부미리보기</a></li>
+                         <li><a href="http://shinheejin.dothome.co.kr/HarryPotter2.html">대도서관</a></li>
                         </ul>
                     </li>
                     <li><a href="#a">공지사항</a>
@@ -40,11 +125,100 @@
                     </ul>
                 </nav>
                 </div>
-                <div class="visual"><img src="http://bonozoa.dothome.co.kr/show1.png" alt=""></div><!--show뒤에 숫자 각자 파트에 맞춰서 바꿔줘-->
+                <div class="visual"><img src="http://bonozoa.dothome.co.kr/mainh.png" alt=""></div><!--show뒤에 숫자 각자 파트에 맞춰서 바꿔줘-->
                 <!--<서원>홈화면:1 교가:2 지도:3 <문용>수업소개:4 공지사항:5 <주영>교수진소개:6 기숙사소개:7 <희진>학부미리보기:8-->
         </header>
+        <a href="#top_of_top" class="go_to_top">
+            <img src="http://shinheejin.dothome.co.kr/images/arrow.png"/> 
+        </a>
         <main>
-            <!--여기에 각자 맡은파트 작성-->
+            <!--one True 레이아웃(code 7-3) // 공지사항 ...표현 ellipsis(code7-7)-->
+            <div id="middle">
+                <div id="mainp">
+                    <h1>교내 생활 협동 조합</h1>
+                    <br/>
+                    <h2> 교내생활협동조합(생협)이란?</h2>
+                    <p> 호그와트학교의 구성원인 교원, 직원과 학생들의 주체적인 참여를 기반으로 협동의 가치를 폭넓게 실현함으로써<br/>
+                        다양한 복지서비스를 통한 학교 구성원의 학업과 연구를 지원하는 조합입니다.</p>
+                    <br/>
+                    <div class="box"><h3>학교 굿즈</h3></div>
+                    <div class="good">
+                        <div class="pic"><img src="http://bonozoa.dothome.co.kr/goods1.PNG"></div>
+                        <div class="text">
+                            <h4>호그와트 심볼 실링왁스 세트</h4>
+                            <p>부엉이 편지를 보낼 때마다 바람때문에 편지가 열리고 너덜너덜해졌었나요?<br/>
+                                호그와트에서 제작한 실링 세트를 이용해보세요!<br/>
+                                호그와트 심볼로 찍어낼 수 있어 실용성뿐만 아니라 디자인적 효과도 줄 수 있습니다.</p>
+                        </div> 
+                        <h5>₩30,000</h5>
+                    </div>
+                    <div class="good">
+                        <div class="pic"><img src="http://bonozoa.dothome.co.kr/goods2.PNG"></div>
+                        <div class="text">
+                            <h4>기숙사별 키링</h4>
+                            <p>지팡이와 빗자루를 개성 있게 꾸밀 수 있는 키링입니다.<br/>
+                                같은 기숙사 친구들과 단체 키링을 맞춰 보세요.
+                            </p>
+                            <h5>₩12,000(개당)</h5>
+                        </div> 
+                    </div>
+                    <div class="box"><h3>수업 부자재</h3></div>
+                    <div class="good">
+                        <div class="pic"><img src="http://bonozoa.dothome.co.kr/goods3.PNG"></div>
+                        <div class="text">
+                            <h4>캔들 랜턴 오브제</h4>
+                            <p>화그와트 건물 특성상 교실의 대부분이 어둡고 칙칙합니다.<br/>
+                                그런 환경 속에서도 책을 읽을 수 있도록 캔들 랜턴을 준비하세요.<br/>
+                                **슬리데린 기숙사 학생들에게도 강력 추천합니다.**
+                            </p>
+                            <h5>₩18,500</h5>
+                        </div> 
+                    </div>
+                    <br/>
+                    <h4>이 외의 다양한 제품을 판매하고 있습니다.<br/>
+                            (위치: 시계탑 건물 4층 병동 옆)<br/>
+                    </h4>
+                </div>
+                <div id="side"> 
+                    <div id="youtubep">
+                        <h1>호트와트 뉴스</h1>
+                        <br/>
+                        <p align="middle"><iframe width=80% height="400" src="https://www.youtube.com/embed/aK0y4PGpgBg"  title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                        <h2 align="middle">....그 치열했던 전투를 되짚어보며.....</h2>
+                        <p align="middle">이번 호그와트 메인홀에서 졸업생 '해리 포터'의 초정강연이 있을 예정입니다. <br/>
+                            그때 그시절의 학교 이야기와 호그와트 역사상 최고의 전투를 생생하게 들을 수 있는 기회이므로<br/>
+                            학생 여러분들의 많은 참여 부탁드립니다.<br/>
+                        </p><br/>
+                        <a href="http://dltk456.dothome.co.kr//Hogwarts/invitationLectureForGraduates.html"><p align="middle">관련 공지사항 바로가기>></p></a><br/>
+                    </div>
+                    <div id="mapp">
+                        <h1>학교 오시는 길</h1>
+                        <br/>
+                        <div class="view"><img src="http://bonozoa.dothome.co.kr/mapp.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
         </main>
+        <div id="footer">
+            <div class="footer-container">
+                <div class="first-img">
+                    <a href="http://bonozoa.dothome.co.kr/HogwartsSchool.html"><img  src="http://shinheejin.dothome.co.kr/images/social/logo.png" /></a>
+                </div>
+                <div class="middle-word">
+                    <a>호그와트 급행열차 세인트 판크라스역 9와 3/4 승강장</a>
+                    <br>
+                    <a>COPYRIGHT© 2021 HOGWARTS SCHOOL. ALL RIGHTS RESERVED.</a>
+                </div>
+                <div class="last-img">
+                    <a href="https://m.facebook.com/HogwartsLegacy/" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/facebook.jpg" /></a>
+            
+                    <a href="https://twitter.com/HogwartsLegacy" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/twitter.jpg"/></a>
+            
+                    <a href="https://www.instagram.com/hogwartslegacy/?hl=ko" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/instagram.jpg"/></a>
+            
+                    <a href="https://kr.linkedin.com/" target="_blank"><img src="http://shinheejin.dothome.co.kr/images/social/linkedin.jpg"/></a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
